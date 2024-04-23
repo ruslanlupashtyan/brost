@@ -1,3 +1,5 @@
+// let input = document.querySelector("#phone");
+
 let items = document.querySelectorAll("form.form .item.input-collect");
 // toggle classlist in radio buttons
 items.forEach((el) => {
@@ -77,12 +79,13 @@ document.querySelector("form.form").addEventListener("submit", function (e) {
   }
 
   let phone = document.querySelector(".contact .phone");
+  let dialcode = document.querySelector(".iti__flag .iti__a11y-text");
 
   // add phone to message
-  if (phone.value.split("").length != 18) {
+  if (phone.value.split("").length != 12) {
     allOk = false;
   } else {
-    message += `Телефон: ${phone.value} \n`;
+    message += `Країна та телефон: ${dialcode.innerHTML}  ${phone.value} \n`;
     console.log(phone.value.split("").length);
   }
 
@@ -107,7 +110,8 @@ document.querySelector("form.form").addEventListener("submit", function (e) {
     }`;
   }
   console.log(`AllOk: ${allOk}`);
-
+  console.log(phone.value.split("").length);
+  console.log(dialcode.innerHTML);
   if (allOk) {
     axios
       .post(URI_API, {

@@ -33,6 +33,7 @@
     "gulp-babel": "^8.0.0",
     "gulp-pug": "^5.0.0",
     "imask": "^6.4.2",
+    "intl-tel-input": "^21.2.5",
     "slim-select": "^1.27.1",
     "swiper": "^8.2.6",
     "vanilla-text-mask": "^5.1.1"
