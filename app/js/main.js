@@ -74,6 +74,7 @@ document.querySelector("form.form").addEventListener("submit", function (e) {
   // add name to message
   if (document.querySelector(".contact .name").value == "") {
     allOk = false;
+    document.querySelector(".contact .name").classList.add("err");
   } else {
     message += `Ім'я: ${document.querySelector(".contact .name").value} \n`;
   }
@@ -82,11 +83,12 @@ document.querySelector("form.form").addEventListener("submit", function (e) {
   let dialcode = document.querySelector(".iti__flag .iti__a11y-text");
 
   // add phone to message
-  if (phone.value.split("").length != 12) {
+  if (phone.value == "") {
     allOk = false;
+    phone.classList.add("err");
   } else {
-    message += `Країна та телефон: ${dialcode.innerHTML}  ${phone.value} \n`;
-    console.log(phone.value.split("").length);
+    message += `Країна (код): ${dialcode.innerHTML} \n`;
+    message += ` Телефон: ${phone.value} \n`;
   }
 
   // add objname to message
@@ -129,6 +131,8 @@ document.querySelector("form.form").addEventListener("submit", function (e) {
       .finally(() => {
         console.log("ok");
       });
+    console.log(message);
+    console.log(allOk);
     document.querySelector(".form-preloader").classList.remove("hidden");
     document.querySelector("form.form").classList.add("hidden");
     setTimeout(() => {

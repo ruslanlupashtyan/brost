@@ -93,6 +93,13 @@
           @include font(14, 18, 400);
         }
       }
+      span {
+        @include font(14, 18, 400);
+        margin-bottom: 8px;
+        @include max-width(b-md) {
+          @include font(12, 16, 400);
+        }
+      }
       // input[type="number"] {
       //   @include font(12, 15, 400);
       //   padding: 13px 18px;
@@ -140,6 +147,7 @@
         }
         width: 100%;
         textarea {
+          resize: none;
           height: 150px;
           border-radius: 8px;
           margin-bottom: 16px;
@@ -159,6 +167,9 @@
       max-width: 350px;
       text-align: center;
     }
+  }
+  .iti {
+    display: block;
   }
 }
 
