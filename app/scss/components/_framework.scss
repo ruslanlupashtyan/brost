@@ -203,6 +203,9 @@ $bps: (
 .wrap {
   flex-wrap: wrap;
 }
+.no-wrap {
+  flex-wrap: nowrap;
+}
 .ai-center {
   align-items: center;
 }

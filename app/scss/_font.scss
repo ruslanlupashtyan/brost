@@ -25,7 +25,12 @@ example:
 */
 
 @font-face {
-  font-family: "Mazzard";
-  src: url("../fonts/MAZZARDL-REGULAR.TTF") format("TrueType");
+  font-family: "Kharkiv";
+  src: url("../fonts/kharkiv-tone.ttf") format("TrueType");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "fixel";
+  src: url("../fonts/FixelVariable.ttf") format("TrueType");
   font-weight: 400;
 }

@@ -1,4 +1,17 @@
 .header {
+  &__logo {
+    svg {
+      margin: 0 auto;
+      display: block;
+      @include max-width(b-md) {
+        width: 150px;
+      }
+    }
+    margin-bottom: 32px;
+    @include max-width(b-md) {
+      margin-bottom: 24px;
+    }
+  }
 }
 
 .header-mob {

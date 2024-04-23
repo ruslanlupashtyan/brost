@@ -1,20 +1,14 @@
 .btn {
-  position: absolute;
-  border-radius: 3px;
-  bottom: 40px;
-  left: calc(50% - 93px);
-  padding: 12px 18px;
-  background-color: #1e1e1e;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  background-color: #282eaa;
+  padding: 16px 110px;
+  border-radius: 8px 0 8px 0;
   color: #fff;
-  font-family: "Mazzard";
-  @include font(24, 28, 400);
-
-  // &_primary {
-  //   &:hover {
-  //   }
-  // }
-  // &_secondary {
-  //   &:hover {
-  //   }
-  // }
+  @include max-width(b-md) {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
 }

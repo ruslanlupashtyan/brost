@@ -1,0 +1,152 @@
+-
+    var items = [
+        {
+          title: '1. Вентиляція:',
+          subtitle: 'Наявність вентиляції:',
+          txt: 'Кількість наявних припливно-витяжних систем:',
+          name: 'ventilation',
+          id_y: 'ventilation-yes',
+          id_n: 'ventilation-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '2. Локальні витяжні вентилятори:',
+          subtitle: 'Наявність локальних витяжних вентиляторів:',
+          txt: 'Кількість локальних витяжних вентиляторів:',
+          name: 'hood',
+          id_y: 'hood-yes',
+          id_n: 'hood-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '3. Фанкойли:',
+          subtitle: 'Наявність фанкойлів:',
+          txt: 'Кількість фанкойлів:',
+          name: 'funcoil',
+          id_y: 'funcoil-yes',
+          id_n: 'funcoil-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '4. Холодильні машини. Чіллер. та насосна холодопостачання:',
+          subtitle: 'Наявність холодильних машин та насосної холодопостачання:',
+          txt: 'Кількість установок:',
+          name: 'freezer',
+          id_y: 'freezer-yes',
+          id_n: 'freezer-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '5. Система кондиціювання:',
+          subtitle: 'Наявність системи кондиціювання:',
+          txt: 'Кількість блоків внутрішньої та зовнішньої частини:',
+          name: 'condition',
+          id_y: 'condition-yes',
+          id_n: 'condition-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '6. Система управління завісами:',
+          subtitle: 'Наявність системи управління завісами:',
+          txt: 'Кількість завіс:',
+          name: 'curtain',
+          id_y: 'curtain-yes',
+          id_n: 'curtain-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '7. Ескалатори, ліфти:',
+          subtitle: 'Наявність ескалаторів та ліфтів:',
+          txt: 'Кількість установок:',
+          name: 'elevator',
+          id_y: 'elevator-yes',
+          id_n: 'elevator-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '8. Система автоматизованого енергообліку. Створення звітів:',
+          subtitle: 'Наявність системи автоматизованого енергообліку та створення звітів:',
+          txt: 'Кількість споживачів:',
+          name: 'energy',
+          id_y: 'energy-yes',
+          id_n: 'energy-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '9. Система керування освітленням:',
+          subtitle: 'Наявність системи керування освітленням:',
+          txt: 'Кількість груп освітлення:',
+          name: 'lighting',
+          id_y: 'lighting-yes',
+          id_n: 'lighting-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '10. Індивідуальний тепловий пункт:',
+          subtitle: 'Наявність індивідуального теплового пункту:',
+          txt: 'Надішліть схему АСУПТ ІПТ на пошту',
+          name: 'thermal',
+          id_y: 'thermal-yes',
+          id_n: 'thermal-no',
+          class: 'input-file', 
+          filedrop: true,
+          filedrop_id: 'filedrop',
+          filedrop_name: 'Прикріпіть схему АСУПТ ІПТ'
+        }
+    ]
+h2 Оцінка технічних #[br] систем будівлі
+form.form
+  .form__items 
+    for item in items
+      .item(class= item.class)
+        .item__title 
+          p= item.title
+        .item__subtitle
+          p= item.subtitle
+        .item__radio.flex
+          input(type="radio", class="input-yes" name=item.name id=item.id_y value="Так")
+          label(class="show-input" for=item.id_y) Так
+          input(type="radio", class="input-no" name=item.name id=item.id_n value="Ні") 
+          label(class="hide-input" for=item.id_n) Ні
+        .item__hidden
+          if (item.filedrop == true) 
+            p= item.txt
+            a(href="mailto:brostltd@gmail.com") brostltd@gmail.com 
+            //- input(type="file", id=item.filedrop_id)
+            //- label(for=item.filedrop_id)= item.filedrop_name
+          else 
+            p= item.txt
+            input(type="number", pattern="[0-9]*")
+  .form__contact.contacts.flex.wrap
+    .contact
+      p Прізвище Ім’я
+      input(type="text", class="name", name="name")
+    .contact
+      p Номер телефону
+      input(type="text", class="phone", name="phone" pattern="[\d()+]+" id='phone')
+    .contact
+      p Назва об’єкта
+      input(type="text" class='objname')
+    .contact
+      p Адреса об’єкта
+      input(type="text", class='address' name="address")
+    .contact-wide
+      p Додаткова інформація:
+      textarea(class='comment') 
+  .form__submit.flex-md.ai-center.jc-evenly
+    button.btn.send-form(type="submit") Надіслати
+    p *Натискаючи кнопу “Надіслати”, Ви автоматично даєте згоду на збір та обробку персональних данних 
+.form-preloader.hidden
+  .circle
+    .circle-loader-wrap
+      .left-wrap
+        .loader
+      .right-wrap
+        .loader
+.success.hidden.flex.ai-center.jc-center
+  .success__content
+    include ../../images/logo.svg
+    p Дякуємо за заявку. 
+    p Наш менеджер незабаром звʼяжеться з Вами
+
+    button.btn.close OK

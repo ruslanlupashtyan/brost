@@ -1,25 +1,26 @@
-h1,
-h2,
+h2 {
+  margin-bottom: 64px;
+  @include font(64, 80, 400);
+  font-family: "kharkiv";
+  text-transform: uppercase;
+  text-align: center;
+  @include max-width(b-lg) {
+    @include font(24, 34, 400);
+    margin-bottom: 16px;
+  }
+}
+
 h3,
 h4,
 h5,
 h6,
+a,
 p,
-a {
-  font-family: "AgoraSans";
-  color: $black-color;
-}
-
-h1,
-h2,
-h3 {
-  // font-family: "Cormorant";
-}
-
-h4,
-h5,
-h6 {
-  // font-family: "Pulse";
+button[type="submit"],
+input,
+label,
+textarea {
+  font-family: "fixel";
 }
 
 // h1 {

@@ -6944,3 +6944,8 @@
   Object.defineProperty(exports, "__esModule", { value: true });
 });
 //# sourceMappingURL=imask.js.map
+let phoneNumb = document.querySelector("#phone");
+let maskOption = {
+  mask: "+{380}(00) 000-00-00",
+};
+let maskedPhoneNumb = IMask(phoneNumb, maskOption);

@@ -115,7 +115,9 @@ function build() {
     [
       "app/css/style.min.css",
       "app/fonts/**/*",
-      "app/js/main.min.js",
+      // "app/js/main.min.js",
+      "app/js/main.js",
+      "app/js/imask.js",
       "app/js/axios.js",
       "app/**/*.html",
     ],
