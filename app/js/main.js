@@ -1,4 +1,22 @@
 // let input = document.querySelector("#phone");
+const input = document.querySelector("#phone");
+console.log(intlTelInput);
+let iti = window.intlTelInput(input, {
+  initialCountry: "auto",
+  useFullscreenPopup: false,
+  geoIpLookup: (callback) => {
+    fetch("https://ipapi.co/json")
+      .then((res) => res.json())
+      .then((data) => callback(data.country_code))
+      .catch(() => callback("us"));
+  },
+  utilsScript:
+    "https://cdn.jsdelivr.net/npm/intl-tel-input@21.2.6/build/js/utils.js",
+});
+let btn = document.querySelector(".btn");
+// btn.addEventListener("click", function () {
+//   console.log(iti.isValidNumberPrecise());
+// });
 
 let items = document.querySelectorAll("form.form .item.input-collect");
 // toggle classlist in radio buttons
@@ -111,9 +129,14 @@ document.querySelector("form.form").addEventListener("submit", function (e) {
       document.querySelector(".contact-wide .comment").value
     }`;
   }
-  console.log(`AllOk: ${allOk}`);
-  console.log(phone.value.split("").length);
-  console.log(dialcode.innerHTML);
+  if (iti.isValidNumberPrecise()) {
+    allOk = true;
+  } else {
+    phone.classList.add("invalid");
+  }
+  // console.log(`AllOk: ${allOk}`);
+  // console.log(phone.value.split("").length);
+  // console.log(dialcode.innerHTML);
   if (allOk) {
     axios
       .post(URI_API, {

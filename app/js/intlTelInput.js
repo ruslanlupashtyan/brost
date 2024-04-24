@@ -1,5 +1,5 @@
 /*
- * International Telephone Input v21.2.5
+ * International Telephone Input v21.2.6
  * https://github.com/jackocnr/intl-tel-input.git
  * Licensed under the MIT license
  */
@@ -1752,7 +1752,7 @@
         },
         instances: {},
         loadUtils: j,
-        version: "21.2.5",
+        version: "21.2.6",
       };
       window.intlTelInputGlobals = o;
     }
@@ -1771,9 +1771,4 @@
 
   // UMD
   return factoryOutput.default;
-});
-
-window.intlTelInput(input, {
-  initialCountry: "us",
-  strictMode: true,
 });
