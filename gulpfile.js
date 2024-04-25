@@ -118,6 +118,7 @@ function build() {
       // "app/js/main.min.js",
       "app/js/main.js",
       "app/js/imask.js",
+      "app/js/intlTelInput.js",
       "app/js/axios.js",
       "app/**/*.html",
     ],

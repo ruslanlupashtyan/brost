@@ -1,19 +1,20 @@
 // let input = document.querySelector("#phone");
 const input = document.querySelector("#phone");
-console.log(intlTelInput);
-let iti = window.intlTelInput(input, {
-  initialCountry: "auto",
-  useFullscreenPopup: false,
-  geoIpLookup: (callback) => {
-    fetch("https://ipapi.co/json")
-      .then((res) => res.json())
-      .then((data) => callback(data.country_code))
-      .catch(() => callback("us"));
-  },
-  utilsScript:
-    "https://cdn.jsdelivr.net/npm/intl-tel-input@21.2.6/build/js/utils.js",
-});
-let btn = document.querySelector(".btn");
+setTimeout(() => {
+  let iti = window.intlTelInput(input, {
+    initialCountry: "auto",
+    useFullscreenPopup: false,
+    geoIpLookup: (callback) => {
+      fetch("https://ipapi.co/json")
+        .then((res) => res.json())
+        .then((data) => callback(data.country_code))
+        .catch(() => callback("us"));
+    },
+    utilsScript:
+      "https://cdn.jsdelivr.net/npm/intl-tel-input@21.2.6/build/js/utils.js",
+  });
+}, 1000);
+// let btn = document.querySelector(".btn");
 // btn.addEventListener("click", function () {
 //   console.log(iti.isValidNumberPrecise());
 // });
@@ -129,11 +130,15 @@ document.querySelector("form.form").addEventListener("submit", function (e) {
       document.querySelector(".contact-wide .comment").value
     }`;
   }
-  if (iti.isValidNumberPrecise()) {
-    allOk = true;
-  } else {
-    phone.classList.add("invalid");
+  let allButtons = document.querySelectorAll('input[type="radio"]:checked');
+  if (allButtons.length < 10) {
+    allOk = false;
   }
+  // if (iti.isValidNumberPrecise()) {
+  //   allOk = true;
+  // } else {
+  //   phone.classList.add("invalid");
+  // }
   // console.log(`AllOk: ${allOk}`);
   // console.log(phone.value.split("").length);
   // console.log(dialcode.innerHTML);
