@@ -2,13 +2,18 @@
   display: block;
   position: relative;
   cursor: pointer;
-  background-color: #282eaa;
   padding: 16px 110px;
   border-radius: 8px 0 8px 0;
-  color: #fff;
   @include max-width(b-md) {
-    display: block;
     margin: 0 auto;
     margin-bottom: 16px;
+  }
+  &__white {
+    color: #282eaa;
+    background-color: #fff;
+  }
+  &__blue {
+    background-color: #282eaa;
+    color: #fff;
   }
 }

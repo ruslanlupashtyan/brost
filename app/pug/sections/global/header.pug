@@ -1,9 +1,29 @@
 -
     var nav = [
         {
-            title: '',
-            link: ''
-        }
+            title: 'Головна',
+            link: '#'
+        },
+        {
+            title: 'Переваги',
+            link: '#'
+        },
+        {
+            title: 'Послуги',
+            link: '#'
+        },
+        {
+            title: 'Досвід',
+            link: '#'
+        },
+        {
+            title: 'Кейси',
+            link: '#'
+        },
+        {
+            title: 'Контакти',
+            link: '#'
+        },
     ]
 
 header.header
@@ -14,11 +34,20 @@ header.header
             for link in nav 
                 li
                     a(href=link.link)= link.title
-        .header__mobile.mobile
-            a#hamburger.hamburger
-                span.line
-                span.line
-                span.line
+    button.btn.btn__white Розрахунок вартості
+    .header__lang.togle-lang.lang
+        .lang__ua
+            p UA
+        .lang__divider 
+            p /
+        .lang__eng
+            p ENG
+    .header__mobile.mobile
+        a#hamburger.hamburger
+            span.line
+            span.line
+            span.line
+
 .header__menu-mobile.header-mob
     ul.header-mob__list.list
         for link in nav 
