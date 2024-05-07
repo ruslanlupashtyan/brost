@@ -1,18 +1,161 @@
 .header {
+  position: fixed;
+  width: 100%;
+  padding: 15px 0;
+  background-color: $blue-color;
+  color: $white-color;
+  box-shadow: 0px 6px 18px 0px #0000001a;
+  border-radius: 0px 0px 16px 16px;
+  z-index: 2;
   &__logo {
     svg {
       margin: 0 auto;
       display: block;
       @include max-width(b-md) {
-        width: 150px;
+        width: 80px;
       }
     }
-    margin-bottom: 32px;
+    // @include max-width(b-md) {
+    //   margin-bottom: 24px;
+    // }
+  }
+  &__menu {
+    li {
+      margin-right: 30px;
+      &:last-child {
+        margin-right: unset;
+      }
+      @include max-width(b-xl) {
+        margin-right: 10px;
+        &:last-child {
+          margin-right: unset;
+        }
+      }
+    }
+  }
+  &__btn {
+    padding: 8px 16px;
+    margin-bottom: unset;
     @include max-width(b-md) {
-      margin-bottom: 24px;
+      @include font(10, 12, 400);
+      margin-left: auto;
+    }
+  }
+}
+
+.lang {
+  &__ua,
+  &__divider {
+    margin-right: 10px;
+  }
+}
+.hamburger {
+  span {
+    display: block;
+    height: 3px;
+    width: 20px;
+    background-color: $white-color;
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: unset;
     }
   }
 }
 
 .header-mob {
+  display: none;
+  transform: translateY(-102%);
+  transition: ease-in-out 350ms;
+  height: calc(100vh - 80px);
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  z-index: 1;
+  background-image: url(../../../images/bg.webp);
+  @include max-width(b-lg) {
+    display: block;
+  }
+  &__list {
+    margin-bottom: 24px;
+  }
+  &__btn {
+    margin: 0 15px;
+    margin-bottom: 26px;
+  }
+  &__contacts {
+    a {
+      position: relative;
+      margin-bottom: 16px;
+      @include font(16, 27, 400);
+      padding-left: 30px;
+      &::before {
+        content: url(../../../images/phone.svg);
+        height: 24px;
+        width: 24px;
+        display: block;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+  &__lang {
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+    @include font(12, 14, 400);
+    position: absolute;
+    bottom: 24px;
+    left: calc(100% - 260px);
+  }
+  .list {
+    &__item {
+      padding: 20px 15px;
+      border-bottom: 1px solid $blue-color;
+      // &:last-child {
+      //   border-bottom: unset;
+      // }
+      a {
+        font-family: "kharkiv";
+        @include font(16, 16, 400);
+        color: $blue-color;
+      }
+    }
+  }
+  &.show {
+    animation: jump 5s ease-in-out;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(-102%);
+  }
+  24% {
+    transform: translateY(0%);
+  }
+  33% {
+    transform: translateY(-15%);
+  }
+  42% {
+    transform: translateY(0%);
+  }
+  51% {
+    transform: translateY(-7%);
+  }
+  60% {
+    transform: translateY(0%);
+  }
+  69% {
+    transform: translateY(-3%);
+  }
+  78% {
+    transform: translateY(0%);
+  }
+  // 87% {
+  //   transform: translateY(-5%);
+  // }
+  // 100% {
+  //   transform: translateY(0%);
+  // }
 }

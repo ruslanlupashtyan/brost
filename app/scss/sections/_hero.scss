@@ -1,0 +1,78 @@
+.hero {
+  background-image: url(../../images/blue-bg.webp);
+  height: 100vh;
+  padding-top: 160px;
+  h1 {
+    margin-bottom: 16px;
+  }
+  h4 {
+    font-family: "fixel";
+    text-align: center;
+    text-transform: none;
+    margin-bottom: 35px;
+  }
+  .wrapper {
+    height: 100%;
+    background-image: url(../../images/hero.webp);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    @include max-width(b-md) {
+      background-image: url(../../images/hero-mobile.webp);
+      background-size: contain;
+    }
+  }
+  // @include max-width
+}
+.hint {
+  transition: ease-in-out 350ms;
+  width: fit-content;
+  border-radius: 33px;
+  margin: 0 auto;
+  margin-left: 400px;
+  @include max-width(b-xl) {
+    margin-left: 200px;
+  }
+  @include max-width(b-md) {
+    margin-left: 80px;
+  }
+  &__question {
+    background-color: $blue-color;
+    height: 64px;
+    width: 64px;
+    flex-shrink: 0;
+    border: 1px solid $white-color;
+    border-radius: 50%;
+    &:hover {
+      + .hint__text {
+        opacity: 1;
+      }
+    }
+  }
+  &__text {
+    transition: ease-in-out 350ms;
+    max-width: 655px;
+    opacity: 0;
+    p {
+      @include font(14, 18, 400);
+      span {
+        font-weight: 700;
+      }
+    }
+    @include max-width(b-lg) {
+      position: absolute;
+      bottom: 10px;
+      border-radius: 10px;
+      background-color: $white-color;
+      padding: 7px;
+      left: calc(50% - 325px);
+    }
+    @include max-width(b-md) {
+      max-width: 345px;
+      left: calc(50% - 172px);
+    }
+  }
+}
+
+.hint:has(.hint__question:hover) {
+  background-color: $white-color;
+}

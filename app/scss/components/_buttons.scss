@@ -8,12 +8,12 @@
     margin: 0 auto;
     margin-bottom: 16px;
   }
-  &__white {
-    color: #282eaa;
-    background-color: #fff;
+  &--white {
+    color: $black-color;
+    background-color: $white-color;
   }
-  &__blue {
-    background-color: #282eaa;
-    color: #fff;
+  &--blue {
+    background-color: $blue-color;
+    color: $white-color;
   }
 }

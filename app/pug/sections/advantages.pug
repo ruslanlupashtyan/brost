@@ -1,0 +1,34 @@
+-
+  var items = [
+    {
+      image: '../../images/adv1.webp',
+      alt: 'advantage',
+      title: 'Централізоване управління',
+      subtitle: 'Моніторинг та контроль інженерних систем здійснюється з будь якого пристрою під’єднаного до інтернету'
+    },
+    {
+      image: '../../images/adv2.webp',
+      alt: 'advantage',
+      title: 'Власне програмне забезпечення',
+      subtitle: 'Ми об’єднали найкращі сучасні технології для діагностики та контролю стану інженерних систем'
+    },
+    {
+      image: '../../images/adv3.webp',
+      alt: 'advantage',
+      title: 'Широкий спектр робіт',
+      subtitle: 'Працюючи з нами не потрібно шукати підрядника для кожної системи, ми реалізуємо все самостійно'
+    },
+  ]
+
+
+section.advantages.container
+  h2 переваги диспетчеризації
+  .advantages__items.flex.xl-jc-center-down
+    for item in items
+      .item.flex.flex-column.jc-between
+        .item__image 
+          img(src=item.image, alt=item.alt)
+        .item__descr.descr
+          h4.white.descr__title= item.title
+          .descr__subtitle
+            p.white= item.subtitle

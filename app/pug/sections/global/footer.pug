@@ -1,9 +1,30 @@
-footer.footer.container
-  
+//- footer.footer.container
+  h2 Залишились запитання?
+  h4 Залишіть заявку і наш менеджер зв’яжеться з вами
+  .flex
+    form.form
+      .form__contact.contacts.flex.wrap 
+        .contact
+          p Прізвище Ім’я
+          input(type="text", class="name", name="name")
+        .contact
+          p Номер телефону
+          input(type="text", class="phone", name="phone" pattern="\+\d{2} \(\d{3}\) \d{3} \d{2} \d{2}" id='phone')
+        .contact-wide
+          p Додаткова інформація:
+          textarea(class='comment')
+        .form__submit.flex-md.ai-center.jc-evenly
+          button.btn.btn--blue.send-form(type="submit") Надіслати
+          p *Натискаючи кнопу “Надіслати”, Ви автоматично даєте згоду на збір та обробку персональних данних 
+    .contacts
+      a.btn.btn--blue(href="tel:+4474888545") +44 74 888 18 545
+      a.btn.btn--blue(href="tel:+380688818245") +380 68 881 82 45
+      a.btn.btn--blue(href="mailto:brostltd@gmail.com") brostltd@gmail.com
 script(src="js/axios.js" async)
 script(src="js/intlTelInput.js" async)
 script(src="js/imask.js" async)
 script(src="js/main.js" defer)
+
 //- script(src="https://cdn.jsdelivr.net/npm/intl-tel-input@21.2.6/build/js/intlTelInput.min.js")
 //- script.
   //- const input = document.querySelector("#phone");

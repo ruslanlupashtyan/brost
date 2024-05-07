@@ -1,11 +1,27 @@
 body {
   background: url(../images/bg.webp);
   background-attachment: fixed;
-  padding: 64px 15px;
-  @include max-width(b-md) {
-    padding: 32px 15px;
-  }
+  // padding: 64px 15px;
+  // @include max-width(b-md) {
+  //   padding: 32px 15px;
+  // }
   &.hidden {
     overflow: hidden;
+  }
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+.desktop-visible {
+  @include max-width(b-lg) {
+    display: none;
+  }
+}
+.mobile-visible {
+  display: none;
+  @include max-width(b-lg) {
+    display: block;
   }
 }

@@ -95,7 +95,7 @@
         }
     ]
 h2 Заповніть форму #[br] для попереднього розрахунку вартості #[br] диспечеризації Вашої будівлі
-form.form
+form.form.tg-form
   .form__items 
     for item in items
       .item(class= item.class)
@@ -135,7 +135,7 @@ form.form
       p Додаткова інформація:
       textarea(class='comment') 
   .form__submit.flex-md.ai-center.jc-evenly
-    button.btn.btn__blue.send-form(type="submit") Надіслати
+    button.btn.btn--blue.send-form(type="submit") Надіслати
     p *Натискаючи кнопу “Надіслати”, Ви автоматично даєте згоду на збір та обробку персональних данних 
 .form-preloader.hidden
   .circle
@@ -150,4 +150,4 @@ form.form
     p Дякуємо за заявку. 
     p Наш менеджер незабаром звʼяжеться з Вами
 
-    button.btn.btn__blue.close OK
+    button.btn.btn--blue.close OK

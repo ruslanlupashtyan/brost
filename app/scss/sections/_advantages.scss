@@ -1,0 +1,32 @@
+.advantages {
+  overflow: hidden;
+  // &__items {
+  // }
+  .item {
+    padding: 20px;
+    min-width: 350px;
+    background-color: $blue-color;
+    border-radius: 17px;
+    text-align: center;
+    margin-right: 32px;
+    &:last-child {
+      margin-right: unset;
+    }
+    @include max-width(b-md) {
+      min-width: 250px;
+      padding: 10px 15px;
+      margin-right: 16px;
+      &:last-child {
+        margin-right: unset;
+      }
+    }
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+  h4 {
+    margin-bottom: 8px;
+  }
+}
