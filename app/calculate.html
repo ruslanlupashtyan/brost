@@ -49,10 +49,10 @@
       <div class="form__items"> 
         <div class="item input-collect">
           <div class="item__title"> 
-            <p>1. Вентиляція:</p>
+            <p>1. Приточно-витяжна ентиляція:</p>
           </div>
           <div class="item__subtitle">
-            <p>Наявність вентиляції:</p>
+            <p>Наявність приточно-витяжної вентиляції:</p>
           </div>
           <div class="item__radio flex">
             <input class="input-yes" type="radio" name="ventilation" id="ventilation-yes" value="Так"/>
@@ -61,7 +61,7 @@
             <label class="hide-input" for="ventilation-no">Ні</label>
           </div>
           <div class="item__hidden">
-            <p>Кількість наявних припливно-витяжних систем:</p>
+            <p>Кількість наявних приточно-витяжних систем:</p>
             <input type="number" pattern="[0-9]*"/>
           </div>
         </div>
@@ -85,6 +85,24 @@
         </div>
         <div class="item input-collect">
           <div class="item__title"> 
+            <p>5. Система кондиціювання:</p>
+          </div>
+          <div class="item__subtitle">
+            <p>Наявність системи кондиціювання:</p>
+          </div>
+          <div class="item__radio flex">
+            <input class="input-yes" type="radio" name="condition" id="condition-yes" value="Так"/>
+            <label class="show-input" for="condition-yes">Так</label>
+            <input class="input-no" type="radio" name="condition" id="condition-no" value="Ні"/>
+            <label class="hide-input" for="condition-no">Ні</label>
+          </div>
+          <div class="item__hidden">
+            <p>Кількість блоків внутрішньої та зовнішньої частини:</p>
+            <input type="number" pattern="[0-9]*"/>
+          </div>
+        </div>
+        <div class="item input-collect">
+          <div class="item__title"> 
             <p>3. Фанкойли:</p>
           </div>
           <div class="item__subtitle">
@@ -103,7 +121,7 @@
         </div>
         <div class="item input-collect">
           <div class="item__title"> 
-            <p>4. Холодильні машини. Чіллер. та насосна холодопостачання:</p>
+            <p>4. Холодильні машини. Чіллер та насосне холодопостачання:</p>
           </div>
           <div class="item__subtitle">
             <p>Наявність холодильних машин та насосної холодопостачання:</p>
@@ -116,24 +134,6 @@
           </div>
           <div class="item__hidden">
             <p>Кількість установок:</p>
-            <input type="number" pattern="[0-9]*"/>
-          </div>
-        </div>
-        <div class="item input-collect">
-          <div class="item__title"> 
-            <p>5. Система кондиціювання:</p>
-          </div>
-          <div class="item__subtitle">
-            <p>Наявність системи кондиціювання:</p>
-          </div>
-          <div class="item__radio flex">
-            <input class="input-yes" type="radio" name="condition" id="condition-yes" value="Так"/>
-            <label class="show-input" for="condition-yes">Так</label>
-            <input class="input-no" type="radio" name="condition" id="condition-no" value="Ні"/>
-            <label class="hide-input" for="condition-no">Ні</label>
-          </div>
-          <div class="item__hidden">
-            <p>Кількість блоків внутрішньої та зовнішньої частини:</p>
             <input type="number" pattern="[0-9]*"/>
           </div>
         </div>
@@ -155,21 +155,56 @@
             <input type="number" pattern="[0-9]*"/>
           </div>
         </div>
-        <div class="item input-collect">
+        <div class="item input-file">
           <div class="item__title"> 
-            <p>7. Ескалатори, ліфти:</p>
+            <p>10. Індивідуальний тепловий пункт:</p>
           </div>
           <div class="item__subtitle">
-            <p>Наявність ескалаторів та ліфтів:</p>
+            <p>Наявність індивідуального теплового пункту:</p>
           </div>
           <div class="item__radio flex">
-            <input class="input-yes" type="radio" name="elevator" id="elevator-yes" value="Так"/>
-            <label class="show-input" for="elevator-yes">Так</label>
-            <input class="input-no" type="radio" name="elevator" id="elevator-no" value="Ні"/>
-            <label class="hide-input" for="elevator-no">Ні</label>
+            <input class="input-yes" type="radio" name="thermal" id="thermal-yes" value="Так"/>
+            <label class="show-input" for="thermal-yes">Так</label>
+            <input class="input-no" type="radio" name="thermal" id="thermal-no" value="Ні"/>
+            <label class="hide-input" for="thermal-no">Ні</label>
           </div>
           <div class="item__hidden">
-            <p>Кількість установок:</p>
+            <p>Надішліть схему АСУПТ ІПТ <span>(автоматизована система управління технологічним процесом індивідуального теплового пункту)</span> на пошту</p><a href="mailto:brostltd@gmail.com">brostltd@gmail.com </a>
+          </div>
+        </div>
+        <div class="item input-collect">
+          <div class="item__title"> 
+            <p>11. Опалювальна система:</p>
+          </div>
+          <div class="item__subtitle">
+            <p>Наявність опалювальної системи:</p>
+          </div>
+          <div class="item__radio flex">
+            <input class="input-yes" type="radio" name="heatsystem" id="heatsystem-yes" value="Так"/>
+            <label class="show-input" for="heatsystem-yes">Так</label>
+            <input class="input-no" type="radio" name="heatsystem" id="heatsystem-no" value="Ні"/>
+            <label class="hide-input" for="heatsystem-no">Ні</label>
+          </div>
+          <div class="item__hidden">
+            <p>Кількість радіаторів:</p>
+            <input type="number" pattern="[0-9]*"/>
+          </div>
+        </div>
+        <div class="item input-collect">
+          <div class="item__title"> 
+            <p>9. Система керування освітленням:</p>
+          </div>
+          <div class="item__subtitle">
+            <p>Наявність системи керування освітленням:</p>
+          </div>
+          <div class="item__radio flex">
+            <input class="input-yes" type="radio" name="lighting" id="lighting-yes" value="Так"/>
+            <label class="show-input" for="lighting-yes">Так</label>
+            <input class="input-no" type="radio" name="lighting" id="lighting-no" value="Ні"/>
+            <label class="hide-input" for="lighting-no">Ні</label>
+          </div>
+          <div class="item__hidden">
+            <p>Кількість груп освітлення:</p>
             <input type="number" pattern="[0-9]*"/>
           </div>
         </div>
@@ -193,37 +228,20 @@
         </div>
         <div class="item input-collect">
           <div class="item__title"> 
-            <p>9. Система керування освітленням:</p>
+            <p>7. Ескалатори, ліфти:</p>
           </div>
           <div class="item__subtitle">
-            <p>Наявність системи керування освітленням:</p>
+            <p>Наявність ескалаторів та ліфтів:</p>
           </div>
           <div class="item__radio flex">
-            <input class="input-yes" type="radio" name="lighting" id="lighting-yes" value="Так"/>
-            <label class="show-input" for="lighting-yes">Так</label>
-            <input class="input-no" type="radio" name="lighting" id="lighting-no" value="Ні"/>
-            <label class="hide-input" for="lighting-no">Ні</label>
+            <input class="input-yes" type="radio" name="elevator" id="elevator-yes" value="Так"/>
+            <label class="show-input" for="elevator-yes">Так</label>
+            <input class="input-no" type="radio" name="elevator" id="elevator-no" value="Ні"/>
+            <label class="hide-input" for="elevator-no">Ні</label>
           </div>
           <div class="item__hidden">
-            <p>Кількість груп освітлення:</p>
+            <p>Кількість установок:</p>
             <input type="number" pattern="[0-9]*"/>
-          </div>
-        </div>
-        <div class="item input-file">
-          <div class="item__title"> 
-            <p>10. Індивідуальний тепловий пункт:</p>
-          </div>
-          <div class="item__subtitle">
-            <p>Наявність індивідуального теплового пункту:</p>
-          </div>
-          <div class="item__radio flex">
-            <input class="input-yes" type="radio" name="thermal" id="thermal-yes" value="Так"/>
-            <label class="show-input" for="thermal-yes">Так</label>
-            <input class="input-no" type="radio" name="thermal" id="thermal-no" value="Ні"/>
-            <label class="hide-input" for="thermal-no">Ні</label>
-          </div>
-          <div class="item__hidden">
-            <p>Надішліть схему АСУПТ ІПТ <span>(автоматизована система управління технологічним процесом індивідуального теплового пункту)</span> на пошту</p><a href="mailto:brostltd@gmail.com">brostltd@gmail.com </a>
           </div>
         </div>
       </div>

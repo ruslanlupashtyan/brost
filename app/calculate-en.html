@@ -49,10 +49,10 @@
       <div class="form__items"> 
         <div class="item input-collect">
           <div class="item__title"> 
-            <p>1. Ventilation:</p>
+            <p>1. Supply and exhaust ventilation:</p>
           </div>
           <div class="item__subtitle">
-            <p>Ventilation availability:</p>
+            <p>Supply and exhaust ventilation availability:</p>
           </div>
           <div class="item__radio flex">
             <input class="input-yes" type="radio" name="ventilation" id="ventilation-yes" value="Yes"/>
@@ -80,6 +80,24 @@
           </div>
           <div class="item__hidden">
             <p>Number of local exhaust fans:</p>
+            <input type="number" pattern="[0-9]*"/>
+          </div>
+        </div>
+        <div class="item input-collect">
+          <div class="item__title"> 
+            <p>5. Air conditioning system:</p>
+          </div>
+          <div class="item__subtitle">
+            <p>Presence of air conditioning system:</p>
+          </div>
+          <div class="item__radio flex">
+            <input class="input-yes" type="radio" name="condition" id="condition-yes" value="Yes"/>
+            <label class="show-input" for="condition-yes">Yes</label>
+            <input class="input-no" type="radio" name="condition" id="condition-no" value="No"/>
+            <label class="hide-input" for="condition-no">No</label>
+          </div>
+          <div class="item__hidden">
+            <p>Number of indoor and outdoor units:</p>
             <input type="number" pattern="[0-9]*"/>
           </div>
         </div>
@@ -121,24 +139,6 @@
         </div>
         <div class="item input-collect">
           <div class="item__title"> 
-            <p>5. Air conditioning system:</p>
-          </div>
-          <div class="item__subtitle">
-            <p>Presence of air conditioning system:</p>
-          </div>
-          <div class="item__radio flex">
-            <input class="input-yes" type="radio" name="condition" id="condition-yes" value="Yes"/>
-            <label class="show-input" for="condition-yes">Yes</label>
-            <input class="input-no" type="radio" name="condition" id="condition-no" value="No"/>
-            <label class="hide-input" for="condition-no">No</label>
-          </div>
-          <div class="item__hidden">
-            <p>Number of indoor and outdoor units:</p>
-            <input type="number" pattern="[0-9]*"/>
-          </div>
-        </div>
-        <div class="item input-collect">
-          <div class="item__title"> 
             <p>6. Curtain control system</p>
           </div>
           <div class="item__subtitle">
@@ -155,21 +155,56 @@
             <input type="number" pattern="[0-9]*"/>
           </div>
         </div>
-        <div class="item input-collect">
+        <div class="item input-file">
           <div class="item__title"> 
-            <p>7. Escalators, elevators:</p>
+            <p>10. Individual heating substation:</p>
           </div>
           <div class="item__subtitle">
-            <p>Presence of escalators and elevators:</p>
+            <p>Presence of individual heating substation:</p>
           </div>
           <div class="item__radio flex">
-            <input class="input-yes" type="radio" name="elevator" id="elevator-yes" value="Yes"/>
-            <label class="show-input" for="elevator-yes">Yes</label>
-            <input class="input-no" type="radio" name="elevator" id="elevator-no" value="No"/>
-            <label class="hide-input" for="elevator-no">No</label>
+            <input class="input-yes" type="radio" name="thermal" id="thermal-yes" value="Yes"/>
+            <label class="show-input" for="thermal-yes">Yes</label>
+            <input class="input-no" type="radio" name="thermal" id="thermal-no" value="No"/>
+            <label class="hide-input" for="thermal-no">No</label>
           </div>
           <div class="item__hidden">
-            <p>Number of installations:</p>
+            <p>"Send the diagram of the ACS-UEP IPT." <span>(automated process control system for an individual heating station)</span> to mail</p><a href="mailto:brostltd@gmail.com">brostltd@gmail.com </a>
+          </div>
+        </div>
+        <div class="item input-collect">
+          <div class="item__title"> 
+            <p>11. Heating system:</p>
+          </div>
+          <div class="item__subtitle">
+            <p>Availability of a heating system:</p>
+          </div>
+          <div class="item__radio flex">
+            <input class="input-yes" type="radio" name="heatsystem" id="heatsystem-yes" value="Yes"/>
+            <label class="show-input" for="heatsystem-yes">Yes</label>
+            <input class="input-no" type="radio" name="heatsystem" id="heatsystem-no" value="No"/>
+            <label class="hide-input" for="heatsystem-no">No</label>
+          </div>
+          <div class="item__hidden">
+            <p>Number of radiators:</p>
+            <input type="number" pattern="[0-9]*"/>
+          </div>
+        </div>
+        <div class="item input-collect">
+          <div class="item__title"> 
+            <p>9. Lighting control system:</p>
+          </div>
+          <div class="item__subtitle">
+            <p>Presence of lighting control system:</p>
+          </div>
+          <div class="item__radio flex">
+            <input class="input-yes" type="radio" name="lighting" id="lighting-yes" value="Yes"/>
+            <label class="show-input" for="lighting-yes">Yes</label>
+            <input class="input-no" type="radio" name="lighting" id="lighting-no" value="No"/>
+            <label class="hide-input" for="lighting-no">No</label>
+          </div>
+          <div class="item__hidden">
+            <p>Number of lighting groups:</p>
             <input type="number" pattern="[0-9]*"/>
           </div>
         </div>
@@ -193,37 +228,20 @@
         </div>
         <div class="item input-collect">
           <div class="item__title"> 
-            <p>9. Lighting control system:</p>
+            <p>7. Escalators, elevators:</p>
           </div>
           <div class="item__subtitle">
-            <p>Presence of lighting control system:</p>
+            <p>Presence of escalators and elevators:</p>
           </div>
           <div class="item__radio flex">
-            <input class="input-yes" type="radio" name="lighting" id="lighting-yes" value="Yes"/>
-            <label class="show-input" for="lighting-yes">Yes</label>
-            <input class="input-no" type="radio" name="lighting" id="lighting-no" value="No"/>
-            <label class="hide-input" for="lighting-no">No</label>
+            <input class="input-yes" type="radio" name="elevator" id="elevator-yes" value="Yes"/>
+            <label class="show-input" for="elevator-yes">Yes</label>
+            <input class="input-no" type="radio" name="elevator" id="elevator-no" value="No"/>
+            <label class="hide-input" for="elevator-no">No</label>
           </div>
           <div class="item__hidden">
-            <p>Number of lighting groups:</p>
+            <p>Number of installations:</p>
             <input type="number" pattern="[0-9]*"/>
-          </div>
-        </div>
-        <div class="item input-file">
-          <div class="item__title"> 
-            <p>10. Individual heating substation:</p>
-          </div>
-          <div class="item__subtitle">
-            <p>Presence of individual heating substation:</p>
-          </div>
-          <div class="item__radio flex">
-            <input class="input-yes" type="radio" name="thermal" id="thermal-yes" value="Yes"/>
-            <label class="show-input" for="thermal-yes">Yes</label>
-            <input class="input-no" type="radio" name="thermal" id="thermal-no" value="No"/>
-            <label class="hide-input" for="thermal-no">No</label>
-          </div>
-          <div class="item__hidden">
-            <p>"Send the diagram of the ACS-UEP IPT." <span>(automated process control system for an individual heating station)</span> to mail</p><a href="mailto:brostltd@gmail.com">brostltd@gmail.com </a>
           </div>
         </div>
       </div>

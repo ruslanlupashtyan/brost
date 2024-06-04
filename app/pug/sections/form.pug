@@ -1,9 +1,9 @@
 -
     var items = [
         {
-          title: '1. Вентиляція:',
-          subtitle: 'Наявність вентиляції:',
-          txt: 'Кількість наявних припливно-витяжних систем:',
+          title: '1. Приточно-витяжна ентиляція:',
+          subtitle: 'Наявність приточно-витяжної вентиляції:',
+          txt: 'Кількість наявних приточно-витяжних систем:',
           name: 'ventilation',
           id_y: 'ventilation-yes',
           id_n: 'ventilation-no',
@@ -19,24 +19,6 @@
           class: 'input-collect' 
         },
         {
-          title: '3. Фанкойли:',
-          subtitle: 'Наявність фанкойлів:',
-          txt: 'Кількість фанкойлів:',
-          name: 'funcoil',
-          id_y: 'funcoil-yes',
-          id_n: 'funcoil-no',
-          class: 'input-collect' 
-        },
-        {
-          title: '4. Холодильні машини. Чіллер. та насосна холодопостачання:',
-          subtitle: 'Наявність холодильних машин та насосної холодопостачання:',
-          txt: 'Кількість установок:',
-          name: 'freezer',
-          id_y: 'freezer-yes',
-          id_n: 'freezer-no',
-          class: 'input-collect' 
-        },
-        {
           title: '5. Система кондиціювання:',
           subtitle: 'Наявність системи кондиціювання:',
           txt: 'Кількість блоків внутрішньої та зовнішньої частини:',
@@ -46,39 +28,30 @@
           class: 'input-collect' 
         },
         {
+          title: '3. Фанкойли:',
+          subtitle: 'Наявність фанкойлів:',
+          txt: 'Кількість фанкойлів:',
+          name: 'funcoil',
+          id_y: 'funcoil-yes',
+          id_n: 'funcoil-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '4. Холодильні машини. Чіллер та насосне холодопостачання:',
+          subtitle: 'Наявність холодильних машин та насосної холодопостачання:',
+          txt: 'Кількість установок:',
+          name: 'freezer',
+          id_y: 'freezer-yes',
+          id_n: 'freezer-no',
+          class: 'input-collect' 
+        },
+        {
           title: '6. Система управління завісами:',
           subtitle: 'Наявність системи управління завісами:',
           txt: 'Кількість завіс:',
           name: 'curtain',
           id_y: 'curtain-yes',
           id_n: 'curtain-no',
-          class: 'input-collect' 
-        },
-        {
-          title: '7. Ескалатори, ліфти:',
-          subtitle: 'Наявність ескалаторів та ліфтів:',
-          txt: 'Кількість установок:',
-          name: 'elevator',
-          id_y: 'elevator-yes',
-          id_n: 'elevator-no',
-          class: 'input-collect' 
-        },
-        {
-          title: '8. Система автоматизованого енергообліку. Створення звітів:',
-          subtitle: 'Наявність системи автоматизованого енергообліку та створення звітів:',
-          txt: 'Кількість споживачів:',
-          name: 'energy',
-          id_y: 'energy-yes',
-          id_n: 'energy-no',
-          class: 'input-collect' 
-        },
-        {
-          title: '9. Система керування освітленням:',
-          subtitle: 'Наявність системи керування освітленням:',
-          txt: 'Кількість груп освітлення:',
-          name: 'lighting',
-          id_y: 'lighting-yes',
-          id_n: 'lighting-no',
           class: 'input-collect' 
         },
         {
@@ -92,7 +65,43 @@
           filedrop: true,
           filedrop_id: 'filedrop',
           filedrop_name: 'Прикріпіть схему АСУПТ ІПТ'
-        }
+        },
+        {
+          title: '11. Опалювальна система:',
+          subtitle: 'Наявність опалювальної системи:',
+          txt: 'Кількість радіаторів:',
+          name: 'heatsystem',
+          id_y: 'heatsystem-yes',
+          id_n: 'heatsystem-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '9. Система керування освітленням:',
+          subtitle: 'Наявність системи керування освітленням:',
+          txt: 'Кількість груп освітлення:',
+          name: 'lighting',
+          id_y: 'lighting-yes',
+          id_n: 'lighting-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '8. Система автоматизованого енергообліку. Створення звітів:',
+          subtitle: 'Наявність системи автоматизованого енергообліку та створення звітів:',
+          txt: 'Кількість споживачів:',
+          name: 'energy',
+          id_y: 'energy-yes',
+          id_n: 'energy-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '7. Ескалатори, ліфти:',
+          subtitle: 'Наявність ескалаторів та ліфтів:',
+          txt: 'Кількість установок:',
+          name: 'elevator',
+          id_y: 'elevator-yes',
+          id_n: 'elevator-no',
+          class: 'input-collect' 
+        },
     ]
 h2.form__title Заповніть форму #[br] для попереднього розрахунку вартості #[br] диспечеризації Вашої будівлі
 form.form.tg-form
