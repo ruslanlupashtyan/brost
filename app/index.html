@@ -22,7 +22,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container flex ai-center jc-between">
+      <div class="flex ai-center jc-between">
         <div class="header__logo">
            <svg width="163" height="50" viewBox="0 0 163 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M27.8498 15.7625C27.0637 14.6816 25.8648 13.8561 24.3121 13.2861C25.2752 12.7555 26.022 12.0086 26.6509 11.1045C27.2406 10.1808 27.5354 9.02119 27.5354 7.60609C27.5354 6.191 27.2995 5.12968 26.8082 4.2649C26.3168 3.40012 25.6289 2.75154 24.7248 2.22088C23.8404 1.69022 22.7398 1.3561 21.5016 1.15956C20.2437 0.963016 18.8286 0.864746 17.2759 0.864746H0V28.577H18.4159C21.875 28.577 24.5479 27.9481 26.3561 26.6902C28.1446 25.4323 29.0684 23.349 29.0684 20.4795C29.0684 17.61 28.6753 16.8435 27.8498 15.7232V15.7625ZM24.6266 22.1894C24.4693 22.8184 24.1352 23.349 23.6635 23.7814C23.1918 24.2138 22.5432 24.5479 21.7178 24.7641C20.853 25 19.772 25.0982 18.4159 25.0982H3.87186V4.34351H16.8632C17.9442 4.34351 18.9072 4.38283 19.7327 4.4811C20.5189 4.54006 21.2264 4.71694 21.7374 4.97245C22.3074 5.2083 22.7005 5.60138 22.956 6.05342C23.2508 6.54477 23.3884 7.21301 23.3884 7.99917C23.3884 8.78534 23.2508 9.41427 23.0346 9.94493C22.7791 10.4756 22.4057 10.8687 21.875 11.1635C21.3443 11.419 20.6957 11.6155 19.8703 11.7531C19.0841 11.8514 18.0818 11.8907 16.9418 11.8907H7.37028V15.3891H18.298C19.713 15.3891 20.8333 15.4874 21.6981 15.7232C22.5629 15.9198 23.2115 16.2539 23.6832 16.647C24.1745 17.0794 24.4693 17.5707 24.6462 18.1603C24.8035 18.75 24.8821 19.4182 24.8821 20.1651C24.8821 20.9119 24.8231 21.5801 24.6462 22.1698L24.6266 22.1894Z" fill="white"/>
@@ -40,60 +40,1002 @@
         </div>
         <nav class="header__nav desktop-visible">
           <ul class="header__menu header-desk flex">
-            <li><a href="#">Головна</a></li>
-            <li><a href="#">Переваги</a></li>
-            <li><a href="#">Послуги</a></li>
-            <li><a href="#">Досвід</a></li>
-            <li><a href="#">Кейси</a></li>
-            <li><a href="#">Контакти</a></li>
+            <li><a href="/">Головна</a></li>
+            <li><a data-animate="advantages">Переваги</a></li>
+            <li><a data-animate="services">Послуги</a></li>
+            <li><a data-animate="about">Досвід</a></li>
+            <li><a data-animate="cases">Кейси</a></li>
+            <li><a data-animate="footer">Контакти</a></li>
           </ul>
-        </nav>
-        <button class="header__btn btn btn--white">Розрахунок вартості</button>
+        </nav><a class="header__btn btn btn--white" href="/calculate.html">Розрахунок вартості</a>
         <div class="header__lang togle-lang lang desktop-visible flex ai-center">
           <div class="lang__ua">
             <p>UA</p>
           </div>
           <div class="lang__divider"> 
             <p>/</p>
-          </div>
-          <div class="lang__eng">
-            <p>ENG</p>
-          </div>
+          </div><a class="lang__eng active" href="/en.html">
+            <p>ENG</p></a>
         </div>
-        <div class="header__mobile-btn mobile-btn mobile-visible"><a class="hamburger" id="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></a></div>
+        <div class="header__mobile-btn mobile-btn mobile-visible"><a class="hamburger mobile-hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></a></div>
       </div>
     </header>
     <div class="header__menu-mobile header-mob">
       <ul class="header-mob__list list">
-        <li class="list__item item"><a class="item__link header__menu--link" href="#">Головна</a></li>
-        <li class="list__item item"><a class="item__link header__menu--link" href="#">Переваги</a></li>
-        <li class="list__item item"><a class="item__link header__menu--link" href="#">Послуги</a></li>
-        <li class="list__item item"><a class="item__link header__menu--link" href="#">Досвід</a></li>
-        <li class="list__item item"><a class="item__link header__menu--link" href="#">Кейси</a></li>
-        <li class="list__item item"><a class="item__link header__menu--link" href="#">Контакти</a></li>
-      </ul>
-      <button class="header-mob__btn btn btn--blue">Розрахунок вартості</button>
-      <div class="header-mob__contacts container flex flex-column"><a class="contact__item" href="tel:+447488818545">+44 74 888 18 545</a><a class="contact__item" href="tel:+380688818245">+380 68 881 82 45</a><a class="contact__item" href="mailto:brostltd@gmail.com">brostltd@gmail.com</a></div><a class="header-mob__lang" href="#">change to english</a>
+        <li class="list__item item"><a class="item__link header__menu--link">Головна</a></li>
+        <li class="list__item item"><a class="item__link header__menu--link" data-animate="advantages">Переваги</a></li>
+        <li class="list__item item"><a class="item__link header__menu--link" data-animate="services">Послуги</a></li>
+        <li class="list__item item"><a class="item__link header__menu--link" data-animate="about">Досвід</a></li>
+        <li class="list__item item"><a class="item__link header__menu--link" data-animate="cases">Кейси</a></li>
+        <li class="list__item item"><a class="item__link header__menu--link" data-animate="footer">Контакти</a></li>
+      </ul><a class="header-mob__btn btn btn--blue" href="/calculate.html">Розрахунок вартості</a>
+      <div class="header-mob__contacts container flex lg-flex-column-up"><a class="contact__item" href="tel:+447488818545">+44 74 888 18 545</a><a class="contact__item" href="tel:+380688818245">+380 68 881 82 45</a><a class="contact__item" href="mailto:brostltd@gmail.com">brostltd@gmail.com</a></div><a class="header-mob__lang" href="/en.html">change to english</a>
     </div>
     <section class="hero">
       <div class="wrapper">
         <div class="container">
           <h1>Диспетчеризація будівель</h1>
           <h4 class="white">Ваш крок у майбутнє до сучасної, надійної автоматизації <br/> та диспетчеризації експлуатації приміщень</h4>
-          <div class="hero__hint hint flex ai-center jc-center">
+          <div class="hero__hint hint flex jc-center">
             <div class="hint__question flex ai-center jc-center"><svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M13.02 11.79C12.4 12.03 11.89 12.23 11.49 12.39C11.09 12.55 10.78 12.74 10.56 12.96C10.36 13.18 10.22 13.47 10.14 13.83C10.06 14.17 10.02 14.65 10.02 15.27H7.11C7.11 14.29 7.16 13.49 7.26 12.87C7.38 12.25 7.62 11.73 7.98 11.31C8.34 10.89 8.85 10.53 9.51 10.23C10.17 9.93 11.05 9.62 12.15 9.3C12.71 9.14 13.17 8.95 13.53 8.73C13.89 8.51 14.17 8.27 14.37 8.01C14.59 7.75 14.74 7.48 14.82 7.2C14.92 6.92 14.97 6.63 14.97 6.33C14.97 5.87 14.89 5.42 14.73 4.98C14.57 4.54 14.28 4.15 13.86 3.81C13.46 3.45 12.91 3.16 12.21 2.94C11.53 2.72 10.65 2.61 9.57 2.61C8.29 2.61 7.22 2.73 6.36 2.97C5.52 3.21 4.85 3.57 4.35 4.05C3.85 4.53 3.5 5.13 3.3 5.85C3.1 6.55 3 7.37 3 8.31H0C0 7.63 0.0300002 6.96 0.0900002 6.3C0.17 5.62 0.32 4.97 0.54 4.35C0.78 3.73 1.11 3.16 1.53 2.64C1.95 2.1 2.5 1.64 3.18 1.26C3.88 0.86 4.73 0.550001 5.73 0.330001C6.75 0.11 7.95 0 9.33 0C10.95 0 12.31 0.18 13.41 0.54C14.53 0.880001 15.43 1.34 16.11 1.92C16.79 2.5 17.28 3.16 17.58 3.9C17.88 4.64 18.03 5.4 18.03 6.18C18.07 6.72 18.03 7.26 17.91 7.8C17.81 8.34 17.57 8.85 17.19 9.33C16.83 9.81 16.31 10.26 15.63 10.68C14.97 11.1 14.1 11.47 13.02 11.79ZM10.77 17.82V22.11H6.45V17.82H10.77Z" fill="white"/>
 </svg>
 
             </div>
-            <div class="hint__text"> 
-              <p><span>Диспетчеризація</span> — це сукупність технічних засобів і програмних продуктів, за допомогою яких здійснюється <span>централізація контролю</span> та діагностики стану інженерних систем, управління ними та невідкладне прийняття адекватних заходів у разі аварійних ситуацій.</p>
+            <div class="hint-text__wrapper">
+              <div class="hint__text"> 
+                <p><span>Диспетчеризація</span> — це сукупність технічних засобів і програмних продуктів, за допомогою яких здійснюється <span>централізація контролю</span> та діагностики стану інженерних систем, управління ними та невідкладне прийняття адекватних заходів у разі аварійних ситуацій.</p>
+                <p>До 50% енергоресурсів витрачається в результаті не ефективного управління інженерними системами</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="advantages container" data-block="advantages">
+      <h2>переваги диспетчеризації з нами</h2>
+      <div class="advantages__items flex xl-jc-center-down">
+        <div class="item flex flex-column-up jc-between" style="--bg-img: url(../../images/adv1.webp)">
+          <div class="item__descr descr">
+            <h4 class="white descr__title">Централізоване управління</h4>
+            <div class="descr__subtitle">
+              <p class="white">Моніторинг та контроль інженерних систем здійснюється з будь якого пристрою під’єднаного до інтернету</p>
+            </div>
+          </div>
+        </div>
+        <div class="item flex flex-column-up jc-between" style="--bg-img: url(../../images/adv2.webp)">
+          <div class="item__descr descr">
+            <h4 class="white descr__title">Власне програмне забезпечення</h4>
+            <div class="descr__subtitle">
+              <p class="white">Ми об’єднали найкращі сучасні технології для діагностики та контролю стану інженерних систем</p>
+            </div>
+          </div>
+        </div>
+        <div class="item flex flex-column-up jc-between" style="--bg-img: url(../../images/adv3.webp)">
+          <div class="item__descr descr">
+            <h4 class="white descr__title">Широкий спектр робіт</h4>
+            <div class="descr__subtitle">
+              <p class="white">Працюючи з нами не потрібно шукати підрядника для кожної системи, ми реалізуємо все самостійно та комплексно</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="benefits container">
+      <h2>Вигоди від контролю стану інженерних систем</h2>
+      <div class="benefits__items lg-flex-down wrap jc-between">
+        <div class="item flex ai-center">
+          <div class="item__percent"> 
+            <p>-20%</p>
+          </div>
+          <div class="item__description"> 
+            <p>економія енергоресурсів</p>
+          </div>
+        </div>
+        <div class="item flex ai-center">
+          <div class="item__percent"> 
+            <p>+100%</p>
+          </div>
+          <div class="item__description"> 
+            <p>попередження про аварійний стан</p>
+          </div>
+        </div>
+        <div class="item flex ai-center">
+          <div class="item__percent"> 
+            <p>-50%</p>
+          </div>
+          <div class="item__description"> 
+            <p>витрат на обслуговування</p>
+          </div>
+        </div>
+        <div class="item flex ai-center">
+          <div class="item__percent"> 
+            <p>+200%</p>
+          </div>
+          <div class="item__description"> 
+            <p>тривалість служби обладнання</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services" data-block="services"> 
+      <h2>Наші перевірені часом рішення автоматизації будівель</h2>
+      <div class="services__tabs container">
+        <div class="tab tab-mobile flex ai-center">
+          <div class="hamburger service-hamburger"><span></span><span></span><span></span></div>
+          <p class="tab-mobile__title">Приточно-витяжна вентиляція</p>
+        </div>
+        <ul class="services__tab-list"> 
+          <li class="tab flex ai-center md-jc-center-down active">Приточно-витяжна вентиляція</li>
+          <li class="tab flex ai-center md-jc-center-down">Локально витяжні вентилятори</li>
+          <li class="tab flex ai-center md-jc-center-down">Системи кондиціювання (Кондиціонери VRV/VRF, фанкойли)</li>
+          <li class="tab flex ai-center md-jc-center-down">Системи холодопостачання /холодорозподільної системи</li>
+          <li class="tab flex ai-center md-jc-center-down">Теплові завіси</li>
+          <li class="tab flex ai-center md-jc-center-down">Індивідуальні теплові пункти /теплорозподільні системи</li>
+          <li class="tab flex ai-center md-jc-center-down">Опалювальна система (радіатори, тепла підлога)</li>
+          <li class="tab flex ai-center md-jc-center-down">Насосні системи ГВС/ХВС</li>
+          <li class="tab flex ai-center md-jc-center-down">Системи освітлення</li>
+          <li class="tab flex ai-center md-jc-center-down">Система технічного енергообліку</li>
+          <li class="tab flex ai-center md-jc-center-down">Екскалатори та ліфти</li>
+          <li class="tab flex ai-center md-jc-center-down">Системи «загальних замірів» </li>
+          <li class="tab flex ai-center md-jc-center-down">Системи електропостачання</li>
+        </ul>
+      </div>
+      <div class="services__items container">
+        <div class="service active">
+          <h3 class="service__title">Диспетчеризація приточно-витяжної вентиляції</h3>
+          <div class="service__items">
+            <div class="items">
+              <div class="functions">
+                <h4>функції, які ми виконуємо:</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Візуальне відображення технологічного процесу</h5>
+                    <div class="function__text">
+                      <p>Ми надаємо зручний інтерфейс для наочного відстеження та аналізу різних аспектів технологічного процесу. Клієнти можуть спостерігати за параметрами, станом обладнання та ефективністю в реальному часі.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Оперативна зміна технологічних параметрів, режимів роботи, обладнання</h5>
+                    <div class="function__text">
+                      <p>Ми надаємо можливість оперативно змінювати параметри та режими роботи системи в залежності від змінних умов виробництва або інших факторів. Це дозволяє оптимізувати роботу системи для досягнення найкращої продуктивності.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Дистанційний моніторинг і контроль роботи систем</h5>
+                    <div class="function__text">
+                      <p>Наші системи забезпечують віддалений контроль, відстеження та управління роботою інженерних систем з будь-якого місця. Це дозволяє оперативно реагувати на зміни та регулювати параметри через наші платформи.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Оперативне повідомлення про аварійні стани та вихід за межі технологічного регламенту роботи</h5>
+                    <div class="function__text">
+                      <p>Наші системи миттєво сповіщають про будь-які аварійні ситуації або відхилення від нормального режиму роботи. Це дозволяє оперативно реагувати на проблеми та забезпечує безперебійну роботу</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Робота за розкладом</h5>
+                    <div class="function__text">
+                      <p>Ми гарантуємо точне дотримання графіка роботи систем, що сприяє плануванню виробничих процесів та оптимізації використання ресурсів.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Ведення журналу історії роботи з фіксацією подій</h5>
+                    <div class="function__text">
+                      <p>Ми гарантуємо точне дотримання графіка роботи систем, що дозволяє планувати виробничі процеси та оптимізувати використання ресурсів.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="errors"> 
+                <h4>Помилки, які ми виявляємо та аварійні стани, якими ми запобігаємо</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Аварія загрози замерзання теплообмінника/ перегрів електрокалорифера</h5>
+                    <div class="error__text">
+                      <p>Наші системи миттєво реагують на будь-які відхилення температури, що може призвести до замерзання теплообмінника або перегріву електрокалорифера. Ми автоматично вимикаємо або регулюємо обладнання, щоб уникнути аварійних ситуацій.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Аварійний стан приточного/витяжного вентилятора по перепаду тиску</h5>
+                    <div class="error__text">
+                      <p>Наші системи наглядають за роботою вентиляторів та виявляють будь-які відхилення у тиску. У разі виявлення аварійного стану ми автоматично вимикаємо вентилятори та надсилаємо повідомлення для подальшої діагностики та виправлення проблеми.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Аварія забивки приточного/витяжного фільтру</h5>
+                    <div class="error__text">
+                      <p>Наші системи контролюють стан фільтрів інженерних систем і виявляють будь-які забивки. У випадку виявлення проблеми ми надсилаємо повідомлення та можемо автоматично запустити процес очищення або заміни фільтру.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Попередження про вихід за межі діапазону регулювання</h5>
+                    <div class="error__text">
+                      <p>Наші системи надійно контролюють параметри інженерних систем та виявляють будь-які відхилення від заданих значень. У випадку виявлення виходу за межі діапазону регулювання, ми негайно сповіщаємо про це та автоматично вживаємо необхідні заходи для стабілізації ситуації.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Диспетчеризація роботи локально витяжних вентиляторів</h3>
+          <div class="service__items">
+            <div class="items">
+              <div class="functions">
+                <h4>функції, які ми виконуємо:</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Візуальне відображення технологічного процесу</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо інтерфейс, який дозволяє користувачам відслідковувати роботу локальних витяжних вентиляторів та їх вплив на технологічний процес.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Оперативне повідомлення про аварійні стани</h5>
+                    <div class="function__text">
+                      <p>Система автоматично сповіщає про будь-які аварійні стани або незвичайні відхилення в роботі вентиляторів.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Дистанційний моніторинг і контроль роботи вентиляторів</h5>
+                    <div class="function__text">
+                      <p>Наша система дозволяє віддалено контролювати стан, ефективність та керувати роботою витяжних вентиляторів з будь-якого місця. Користувачі можуть віддалено вмикати, вимикати та регулювати параметри роботи локальних витяжних вентиляторів через нашу платформу.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Ведення журналу історії роботи з фіксацією подій</h5>
+                    <div class="function__text">
+                      <p>Система веде детальний журнал роботи вентиляторів з фіксацією подій, що дозволяє відстежувати їх роботу та виявляти можливі проблеми</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Робота за розкладом</h5>
+                    <div class="function__text">
+                      <p>Ми гарантуємо виконання роботи вентиляторів згідно з заданим графіком, що допомагає оптимізувати ефективність їх використання</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Економічне використання енергоресурсів</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо оптимальне використання електроенергії за рахунок роботи вентиляторів згідно з розкладом, що допомагає знизити витрати енергії.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="errors"> 
+                <h4>Помилки, які ми виявляємо та аварійні стани, якими ми запобігаємо</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Моніторинг роботи вентиляційного обладнання</h5>
+                    <div class="error__text">
+                      <p>Наша система постійно контролює стан витяжних вентиляторів, фільтрів та інших компонентів. Якщо виявляється будь-яке неправильне функціонування або відхилення від норми, система негайно сповіщає операторів про це.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Автоматичне виявлення аварійних станів</h5>
+                    <div class="error__text">
+                      <p>Наші системи обладнання автоматично виявляють можливі аварійні ситуації, такі як перевантаження вентиляторів або забиття фільтрів. Це дозволяє операторам оперативно реагувати та вживати необхідні заходи для усунення проблеми</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Інформування про стан обладнання</h5>
+                    <div class="error__text">
+                      <p>Крім виявлення несправностей, наша система надає детальну інформацію про стан обладнання, включаючи історію роботи та попередження про потенційні проблеми. Це дозволяє операторам проводити профілактичні заходи та запобігати виникненню серйозних поломок</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Диспетчеризація роботи системи кондиціювання (Кондиціонери VRV/VRF, фанкойли)</h3>
+          <div class="service__items">
+            <div class="items">
+              <div class="functions">
+                <h4>функції, які ми виконуємо:</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Візуальне відображення технологічного процесу</h5>
+                    <div class="function__text">
+                      <p>Ми надаємо можливість візуального відображення технологічного процесу роботи системи кондиціювання, що дозволяє операторам з легкістю відстежувати стан та ефективність роботи обладнання.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Оперативна зміна технологічних параметрів та уставок</h5>
+                    <div class="function__text">
+                      <p>Наша система забезпечує можливість оперативної зміни технологічних параметрів та уставок систем кондиціювання в разі потреби, що дозволяє швидко адаптувати їх до змінних умов роботи.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Робота за розкладом</h5>
+                    <div class="function__text">
+                      <p>Наша система забезпечує роботу систем кондиціювання відповідно до заданого розкладу, що дозволяє ефективно використовувати ресурси та забезпечує комфортні умови в приміщеннях у визначені години.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Повідомлення про аварійні стани регламенту роботи</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо оперативне повідомлення про будь-які аварійні стани або вихід за межі технологічного регламенту роботи систем кондиціювання для оперативного реагування та усунення проблем</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Дистанційний моніторинг і контроль роботи систем</h5>
+                    <div class="function__text">
+                      <p>Наша система дозволяє віддалено моніторити та керувати роботою систем кондиціювання з будь-якого місця, забезпечуючи операторам оперативний доступ до важливої інформації та керування параметрами та режимами роботи.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Ведення журналу історії роботи з фіксацією подій</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо ведення журналу історії роботи систем кондиціювання з фіксацією всіх важливих подій та змін у роботі обладнання для подальшого аналізу та вдосконалення</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="errors"> 
+                <h4>Помилки, які ми виявляємо та аварійні стани, якими ми запобігаємо</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Аварія забивки фільтру</h5>
+                    <div class="error__text">
+                      <p>Наша система виявляє аварійні стани, пов'язані з забивкою фільтрів, та надає операторам повідомлення для негайного вжиття заходів щодо їх очищення або заміни, що допомагає уникнути зниження ефективності систем кондиціювання та забезпечити здорові умови в приміщеннях.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Попередження про вихід за межі діапазону регулювання</h5>
+                    <div class="error__text">
+                      <p>Наша система виявляє будь-які несправності в роботі окремих груп освітлення, такі як відмова ламп, проблеми з електричною мережею тощо, та негайно повідомляє про них. Це дозволяє швидко реагувати та усувати проблеми для забезпечення безперебійної роботи освітлення</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Коди штатної помилки та необхідність обслуговування (для кондиціонерів)</h5>
+                    <div class="error__text">
+                      <p>Наша система автоматично генерує коди штатної помилки та повідомляє про необхідність обслуговування для кондиціонерів, що дозволяє операторам своєчасно проводити профілактичні заходи та уникнути серйозних проблем у майбутньому.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Диспетчеризація роботи чілера/холодомашин. Системи холодопостачання/холодорозподільної системи</h3>
+          <div class="service__items">
+            <div class="items">
+              <div class="functions">
+                <h4>функції, які ми виконуємо:</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Візуальне відображення технологічного процесу</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо можливість візуального відображення технологічного процесу роботи чілера або холодомашини та системи холодопостачання/холодорозподільної системи, що дозволяє операторам ефективно контролювати їх стан та роботу.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Дистанційний моніторинг роботи системи</h5>
+                    <div class="function__text">
+                      <p>Наша система забезпечує можливість дистанційного моніторингу роботи чілера або холодомашини та системи холодопостачання/холодорозподільної системи, що дозволяє операторам в реальному часі контролювати їх функціонування</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Дистанційний контроль роботи системи</h5>
+                    <div class="function__text">
+                      <p>Ми надаємо можливість дистанційного керування роботою чілера або холодомашини та системи холодопостачання/холодорозподільної системи, включаючи вмикання, вимикання та регулювання параметрів, що дозволяє операторам ефективно управляти ними</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Оперативна зміна технологічних параметрів та уставок</h5>
+                    <div class="function__text">
+                      <p>Наша система дозволяє оперативно змінювати технологічні параметри та уставки роботи системи залежно від потреб, що дозволяє адаптувати їх до змінних умов експлуатації.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Оперативне повідомлення про аварійні стани</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо оперативне повідомлення про будь-які аварійні стани або вихід за межі технологічного регламенту роботи системи для швидкого реагування та усунення проблем.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="errors"> 
+                <h4>Помилки, які ми виявляємо та аварійні стани, якими ми запобігаємо</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Аварія насосів циркуляції</h5>
+                    <div class="error__text">
+                      <p>Наша система виявляє аварійні стани, пов'язані з несправністю або відмовою насосів циркуляції, та надає операторам повідомлення для негайного вжиття заходів для їх відновлення або заміни</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Аварія втрати тиску в системі</h5>
+                    <div class="error__text">
+                      <p>Ми автоматично виявляємо випадки втрати тиску в системі холодопостачання/холодорозподільної системи та надаємо відповідні повідомлення, що дозволяє операторам швидко вжити заходів для відновлення тиску та уникнути перерв у роботі системи.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Попередження про вихід за межі діапазону регулювання</h5>
+                    <div class="error__text">
+                      <p>Наша система автоматично сповіщає про будь-які випадки виходу параметрів роботи системи за допустимі межі, що дозволяє операторам оперативно вжити заходів для корекції роботи та запобігти серйозним поломкам</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Вивід штатних аварій холодогенератору</h5>
+                    <div class="error__text">
+                      <p>Наша система надає повідомлення про штатні аварійні стани чілера або холодомашини, такі як перегрів або низький рівень охолодження, що дозволяє операторам оперативно реагувати та запобігати подальшим проблемам з обладнанням</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Диспетчеризація роботи теплових завіс</h3>
+          <div class="service__items">
+            <div class="items">
+              <div class="functions">
+                <h4>функції, які ми виконуємо:</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Візуальне відображення технологічного процесу</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо можливість візуального відображення технологічного процесу роботи теплових завіс, що дозволяє операторам спостерігати за їхньою діяльністю та вчасно виявляти будь-які аномалії.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Дистанційний моніторинг і контроль роботи завіс</h5>
+                    <div class="function__text">
+                      <p>Наша система забезпечує можливість дистанційного моніторингу та контролю теплових завіс. Оператори можуть в реальному часі контролювати їх ефективність та функціонування, а також віддалено керувати ними та реагувати на зміни та потреби.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Оперативна зміна технологічних параметрів, режимів роботи, уставок</h5>
+                    <div class="function__text">
+                      <p>Наша система надає можливість оперативно змінювати технологічні параметри, режими роботи та уставки теплових завіс, що дозволяє швидко адаптувати їх до змінних умов.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Оперативне повідомлення про аварійні стани</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо оперативне повідомлення про будь-які аварійні стани та виходи за межі технологічного регламенту роботи теплових завіс, що дозволяє операторам негайно реагувати на проблеми та уникати серйозних наслідків.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="errors"> 
+                <h4>Помилки, які ми виявляємо та аварійні стани, якими ми запобігаємо</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Аварія перегріву теплових завіс</h5>
+                    <div class="error__text">
+                      <p>Наша система виявляє аварійний стан перегріву теплових завіс та надає операторам відповідне повідомлення, щоб вони могли вжити заходів для охолодження та уникнення подальших пошкоджень</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Втрата зв'язку з тепловими завісами</h5>
+                    <div class="error__text">
+                      <p>Ми виявляємо випадки втрати зв'язку з тепловими завісами та надаємо операторам повідомлення для відновлення зв'язку та забезпечення безперервної роботи системи</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Недостатній тиск чи об'єм гарячого повітря</h5>
+                    <div class="error__text">
+                      <p>Система виявляє помилку у випадку недостатнього тиску або об'єму гарячого повітря, що подається тепловими завісами, і відразу ж повідомляє операторам для подальшого вжиття заходів</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Перевищення допустимих значень енергоспоживання</h5>
+                    <div class="error__text">
+                      <p>Ми виявляємо аварійний стан, якщо спостерігається перевищення допустимих значень енергоспоживання тепловими завісами, та надаємо операторам інформацію для коригування роботи системи</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Диспетчеризація роботи індивідуального теплового пункту/теплорозподільної системи</h3>
+          <div class="service__items">
+            <div class="items">
+              <div class="functions">
+                <h4>функції, які ми виконуємо:</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Візуальне відображення технологічного процесу</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо можливість візуального відображення технологічного процесу роботи індивідуального теплового пункту або теплорозподільної системи, що дозволяє операторам ефективно контролювати їх стан та роботу.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Оперативна зміна технологічних параметрів та установок</h5>
+                    <div class="function__text">
+                      <p>Наша система забезпечує можливість оперативної зміни технологічних параметрів та уставок систем кондиціювання в разі потреби, що дозволяє швидко адаптувати їх до змінних умов роботи.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Дистанційний моніторинг і контроль роботи систем</h5>
+                    <div class="function__text">
+                      <p>Наша система забезпечує дистанційний моніторинг та керування роботою індивідуального теплового пункту або теплорозподільної системи. Оператори можуть контролювати їх функціонування в реальному часі, включаючи вмикання, вимикання та регулювання параметрів для ефективного управління.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Оперативне повідомлення про аварійні стани</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо оперативне повідомлення про будь-які аварійні стани або вихід за межі технологічного регламенту роботи системи для швидкого реагування та усунення проблем</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Робота за розкладом</h5>
+                    <div class="function__text">
+                      <p>Наша система забезпечує роботу індивідуального теплового пункту або теплорозподільної системи відповідно до заданого розкладу, що дозволяє ефективно використовувати ресурси та забезпечує комфортні умови в приміщеннях у визначені години.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="errors"> 
+                <h4>Помилки, які ми виявляємо та аварійні стани, якими ми запобігаємо</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Аварія насосів циркуляції</h5>
+                    <div class="error__text">
+                      <p>Наша система виявляє аварійні стани, пов'язані з несправністю або відмовою насосів циркуляції, та надає операторам повідомлення для негайного вжиття заходів для їх відновлення або заміни</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Аварія втрати тиску в системі</h5>
+                    <div class="error__text">
+                      <p>Ми автоматично виявляємо випадки втрати тиску в теплорозподільній системі та надаємо відповідні повідомлення, що дозволяє операторам швидко вжити заходів для відновлення тиску та уникнути перерв у роботі системи.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Попередження про вихід за межі діапазону регулювання</h5>
+                    <div class="error__text">
+                      <p>Наша система автоматично сповіщає про будь-які випадки виходу параметрів роботи системи за допустимі межі, що дозволяє операторам оперативно вжити заходів для корекції роботи та запобігти серйозним поломкам</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Збереження обладнання у випадку критичних та аварійних ситуацій</h5>
+                    <div class="error__text">
+                      <p>В разі виникнення критичних або аварійних ситуацій наша система автоматично виконує заходи для збереження обладнання, включаючи вимкнення або обмеження роботи, що дозволяє запобігти серйозним пошкодженням та забезпечити його подальшу надійну роботу</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Диспетчеризація опалювальної системи (радіатори, тепла підлога)</h3>
+          <div class="service__items">
+            <div class="items">
+              <div class="functions">
+                <h4>функції, які ми виконуємо:</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Оперативний моніторинг температури</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо оперативний моніторинг температури в приміщеннях за допомогою сенсорів, встановлених на радіаторах та теплій підлозі, що дозволяє контролювати та коригувати температуру для забезпечення комфорту.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Регулювання режиму роботи системи опалення</h5>
+                    <div class="function__text">
+                      <p>Ми автоматично регулюємо роботу опалювальної системи відповідно до заданих параметрів і графіків, забезпечуючи оптимальний рівень тепла в приміщеннях при мінімальних енергетичних витратах.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Формування звітів по споживанню тепла</h5>
+                    <div class="function__text">
+                      <p>Ми автоматично формуємо звіти, які містять інформацію про спожите тепло за вибраний період, що дозволяє аналізувати ефективність використання системи опалення та планувати витрати.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Спрощення життя та оптимізація витрат</h5>
+                    <div class="function__text">
+                      <p>Надання інформації про роботу опалювальної системи у вигляді зрозумілих звітів допомагає управляти витратами та оптимізувати використання теплових ресурсів. Це дозволяє ефективніше розподіляти тепло, зменшувати витрати та підвищувати рівень комфорту для користувачів.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="errors"> 
+                <h4>Помилки, які ми виявляємо та аварійні стани, якими ми запобігаємо</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Перегрів або недогрів приміщень</h5>
+                    <div class="error__text">
+                      <p>Ми виявляємо випадки перегріву або недогріву приміщень та автоматично коригуємо роботу системи опалення для підтримання оптимальної температури, що запобігає енерговитратам та дискомфорту.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Несправність сенсорів температури</h5>
+                    <div class="error__text">
+                      <p>Ми виявляємо несправності сенсорів температури та автоматично повідомляємо про необхідність їх обслуговування або заміни, що дозволяє уникнути неточностей у вимірах та забезпечити коректну роботу системи.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Порушення циркуляції теплоносія</h5>
+                    <div class="error__text">
+                      <p>Ми виявляємо порушення циркуляції теплоносія (завоздушеність, забруднення) та автоматично повідомляємо про це, щоб вжити заходів для їх усунення та забезпечення стабільної роботи системи.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Перевитрата енергії</h5>
+                    <div class="error__text">
+                      <p> Ми виявляємо перевитрати енергії внаслідок неправильного налаштування або несправностей системи та надаємо рекомендації для їх усунення, що дозволяє зменшити витрати на опалення.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Диспетчеризація роботи насосної системи ГВС/ХВС</h3>
+          <div class="service__items">
+            <div class="items">
+              <div class="functions">
+                <h4>функції, які ми виконуємо:</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Візуальне відображення технологічного процесу</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо можливість візуального перегляду роботи насосної системи ГВС/ХВС через диспетчерський інтерфейс, що дозволяє операторам з легкістю контролювати стан системи</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Дистанційний моніторинг і контроль роботи систем</h5>
+                    <div class="function__text">
+                      <p>Наша система забезпечує можливість дистанційного моніторингу та контролю теплових завіс. Оператори можуть в реальному часі контролювати їх ефективність та функціонування, а також віддалено керувати ними та реагувати на зміни та потреби.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Оперативна зміна технологічних параметрів, режимів роботи, уставок</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо можливість оперативної зміни технологічних параметрів, режимів роботи та уставок насосної системи ГВС/ХВС з метою оптимізації його роботи</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Оперативне повідомлення про аварійні стани</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо оперативне повідомлення про будь-які аварійні стани та виходи за межі технологічного регламенту роботи насосної системи ГВС/ХВС, щоб оператори могли негайно реагувати на них.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="errors"> 
+                <h4>Помилки, які ми виявляємо та аварійні стани, якими ми запобігаємо</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Аварія насосів циркуляції</h5>
+                    <div class="error__text">
+                      <p>Ми виявляємо аварійний стан насосів циркуляції та вживаємо заходів для їх швидкого відновлення або заміни, щоб забезпечити безперебійне функціонування системи.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Аварія втрати тиску в системі</h5>
+                    <div class="error__text">
+                      <p>Ми виявляємо аварійний стан втрати тиску в системі та автоматично ініціюємо процес виявлення та усунення причин цього стану, щоб забезпечити нормальний режим роботи</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Попередження про вихід за межі діапазону регулювання</h5>
+                    <div class="error__text">
+                      <p>Ми виявляємо будь-які випадки виходу параметрів роботи насосної системи ГВС/ХВС за межі діапазону регулювання та негайно повідомляємо про це операторів для прийняття необхідних заходів.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Вивід штатних аварій насосної системи</h5>
+                    <div class="error__text">
+                      <p>Ми забезпечуємо вивід інформації про штатні аварійні стани насосної системи ГВС/ХВС, щоб оператори могли вчасно реагувати та уникнути негативних наслідків</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Диспетчеризація роботи системи освітлення</h3>
+          <div class="service__items">
+            <div class="items">
+              <div class="functions">
+                <h4>функції, які ми виконуємо:</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Дистанційний моніторинг і контроль груп освітлення</h5>
+                    <div class="function__text">
+                      <p>Наша система надає можливість віддалено моніторити та керувати роботою різних груп освітлення з будь-якого місця. Це дозволяє операторам контролювати стан, ефективність, вмикання, вимикання та регулювання яскравості освітлення, забезпечуючи оптимальне освітлення приміщень згідно з потребами.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Робота за розкладом</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо роботу освітлення відповідно до заданого графіка, що дозволяє ефективно використовувати ресурси та забезпечує комфортне освітлення приміщень у визначені години</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Робота за алгоритмом освітленості</h5>
+                    <div class="function__text">
+                      <p>Наша система працює згідно з алгоритмами, що враховують рівень природного світла та потреби користувачів, забезпечуючи оптимальне освітлення в приміщеннях за будь-яких умов</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Економічне використання енергоресурсів</h5>
+                    <div class="function__text">
+                      <p>Ми раціонально використовуємо електроенергію за допомогою роботи освітлення за розкладом та використанням енергоефективних алгоритмів керування, що дозволяє знизити витрати енергії</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="errors"> 
+                <h4>Помилки, які ми виявляємо та аварійні стани, якими ми запобігаємо</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Відхилення від графіка роботи</h5>
+                    <div class="error__text">
+                      <p>Наша система виявляє будь-які відхилення в роботі освітлення від заданого графіка та негайно повідомляє про це. Це дозволяє операторам вчасно вжити заходів для відновлення розкладу та уникнення невідповідностей</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Несправності в групах освітлення</h5>
+                    <div class="error__text">
+                      <p>Наша система виявляє будь-які несправності в роботі окремих груп освітлення, такі як відмова ламп, проблеми з електричною мережею тощо, та негайно повідомляє про них. Це дозволяє швидко реагувати та усувати проблеми для забезпечення безперебійної роботи освітлення</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Виявлення енергозатрат</h5>
+                    <div class="error__text">
+                      <p>Наша система аналізує споживання енергії кожною групою освітлення та виявляє можливі надмірні витрати. Це дозволяє ідентифікувати потенційні джерела енерговитрат та вживати заходів для їх зниження, що сприяє економії електроенергії.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Попередження про низький рівень освітленості</h5>
+                    <div class="error__text">
+                      <p>Наша система автоматично виявляє низький рівень освітленості в приміщеннях та сповіщає операторів. Це дозволяє швидко реагувати та забезпечити належний комфорт та безпеку для користувачів приміщення.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Диспетчерезація системи технічного енергообліку</h3>
+          <div class="service__items">
+            <div class="items">
+              <div class="functions">
+                <h4>функції, які ми виконуємо:</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Оперативний збір показів лічильників на об’єкті</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо оперативний збір показів лічильників електроенергії, води, газу та інших ресурсів на об’єкті для моніторингу їх споживання</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Формування звіту по використаним ресурсам за вибраний період</h5>
+                    <div class="function__text">
+                      <p>Ми автоматично формуємо звіти, які містять інформацію про використані ресурси (електроенергія, вода, газ тощо) за вибраний період, що дозволяє здійснювати аналіз та планування споживання</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Ведення журналу історії</h5>
+                    <div class="function__text">
+                      <p>Ми ведемо журнал історії роботи системи технічного енергообліку, фіксуючи всі події та зміни у використанні ресурсів для подальшого аналізу та контролю</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Спрощення життя та оптимізація витрат</h5>
+                    <div class="function__text">
+                      <p>Надання інформації про ресурси та їх використання у вигляді зрозумілих звітів допомагає управляти витратами та оптимізувати їх використання. Це дозволяє ефективніше розподіляти ресурси, зменшувати витрати та підвищувати рівень комфорту для користувачів</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="errors"> 
+                <h4>Помилки, які ми виявляємо та аварійні стани, якими ми запобігаємо</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Відсутність показів лічильників</h5>
+                    <div class="error__text">
+                      <p>Ми виявляємо відсутність показів лічильників та автоматично повідомляємо про це, щоб вжити заходів для їх відновлення та забезпечення надійного збору даних.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Несправність лічильників</h5>
+                    <div class="error__text">
+                      <p>Ми виявляємо несправності лічильників та автоматично ініціюємо їх обслуговування або заміну, щоб уникнути неточностей у вимірах та забезпечити точність обліку ресурсів</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Диспетчеризація екскалаторів та ліфтів</h3>
+          <div class="service__items">
+            <div class="items">
+              <div class="functions">
+                <h4>функції, які ми виконуємо:</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Моніторинг та управління роботою ескалаторів та ліфтів</h5>
+                    <div class="function__text">
+                      <p>Забезпечення постійного моніторингу роботи ескалаторів та ліфтів для виявлення будь-яких відхилень в роботі та оперативного реагування на них.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Планування технічного обслуговування</h5>
+                    <div class="function__text">
+                      <p>Аналіз даних про стан ескалаторів та ліфтів дозволяє планувати технічне обслуговування та профілактичні заходи для забезпечення їх надійної та безперебійної роботи</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Автоматичне виявлення несправностей</h5>
+                    <div class="function__text">
+                      <p>Система автоматично виявляє можливі несправності в роботі ескалаторів та ліфтів, такі як зупинки, затримки або відхилення від звичайного режиму роботи.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Збереження даних про експлуатацію</h5>
+                    <div class="function__text">
+                      <p>Ведення журналу історії роботи ескалаторів та ліфтів з фіксацією всіх подій та обслуговування допомагає здійснювати аналіз та планування робіт щодо їх обслуговування та модернізації.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="errors"> 
+                <h4>Помилки, які ми виявляємо та аварійні стани, якими ми запобігаємо</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Виявлення несправностей в роботі ескалаторів та ліфтів</h5>
+                    <div class="error__text">
+                      <p>Система виявляє несправності, такі як зупинки, затримки або працездатність під час їх роботи та повідомляє про них операторам для подальшого втручання.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Контроль за станом обладнання</h5>
+                    <div class="error__text">
+                      <p>Моніторинг параметрів роботи ескалаторів та ліфтів дозволяє вчасно виявляти ознаки зносу, недоліків або потенційних проблем та запобігати аварійним ситуаціям</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Оперативна реакція на аварійні ситуації</h5>
+                    <div class="error__text">
+                      <p>Система надає оперативне повідомлення про будь-які аварійні стани або несправності в роботі ескалаторів та ліфтів, що дозволяє операторам швидко реагувати та усувати проблеми.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Запобігання несправностям та аваріям</h5>
+                    <div class="error__text">
+                      <p>Шляхом постійного моніторингу та планування технічного обслуговування ми попереджаємо можливі несправності та аварійні ситуації, що дозволяє підтримувати безперебійну роботу ескалаторів та ліфтів.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Диспетчеризація системи «загальних замірів»</h3>
+          <div class="service__items">
+            <div class="items">
+              <div class="functions">
+                <h4>функції, які ми виконуємо:</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Візуальне відображення технологічного процесу</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо візуальне відображення роботи системи загальних замірів, що дозволяє операторам в реальному часі бачити стан системи та її компонентів.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Дистанційний моніторинг і контроль роботи систем</h5>
+                    <div class="function__text">
+                      <p>Ми здійснюємо дистанційний моніторинг параметрів роботи системи, таких як температура, вологість та стан датчиків протікання води, для вчасного виявлення будь-яких аномалій</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Оперативне повідомлення про аварійні стани</h5>
+                    <div class="function__text">
+                      <p>Ми автоматично надсилаємо операторам оперативне повідомлення у випадку виявлення аварійних станів або виходу параметрів за межі технологічного регламенту роботи</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Ведення журналу історії роботи</h5>
+                    <div class="function__text">
+                      <p>Ми ведемо журнал історії роботи системи з фіксацією подій, що дозволяє проводити аналіз ефективності та вчасно виявляти потенційні проблеми</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="errors"> 
+                <h4>Помилки, які ми виявляємо та аварійні стани, якими ми запобігаємо</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Спрацювання датчиків антизатоплення</h5>
+                    <div class="error__text">
+                      <p>Ми виявляємо спрацювання датчиків протікання води та негайно повідомляємо про це, щоб запобігти можливим затопленням та матеріальним збиткам</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Підйом температури в пріоритетному приміщенні</h5>
+                    <div class="error__text">
+                      <p>Ми виявляємо підйом температури в пріоритетних приміщеннях, таких як серверна або щитова, і автоматично вживаємо заходів для зниження температури та запобігання можливим перегрівам обладнання</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Диспетчеризація роботи системи електропостачання</h3>
+          <div class="service__items">
+            <div class="items">
+              <div class="functions">
+                <h4>функції, які ми виконуємо:</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Візуальне відображення схеми електропостачання</h5>
+                    <div class="function__text">
+                      <p>Ми надаємо можливість візуального відображення схеми електропостачання, що дозволяє операторам швидко оцінити стан системи та виявити можливі проблеми.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Дистанційний моніторинг роботи системи</h5>
+                    <div class="function__text">
+                      <p>Наша система забезпечує можливість дистанційного моніторингу роботи системи електропостачання, що дозволяє операторам в реальному часі контролювати її стан та ефективно реагувати на зміни.</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Оперативне повідомлення про аварійні стани</h5>
+                    <div class="function__text">
+                      <p>Ми забезпечуємо оперативне повідомлення про будь-які аварійні стани у системі електропостачання, що дозволяє операторам негайно реагувати та усувати проблеми</p>
+                    </div>
+                  </div>
+                  <div class="function">
+                    <h5 class="function__title flex ai-center jc-center">Ведення журналу історії роботи з фіксацією подій</h5>
+                    <div class="function__text">
+                      <p>Наша система автоматично веде журнал історії роботи з фіксацією подій, що дозволяє зберігати детальну інформацію про всі зміни та події, що відбуваються у системі.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="errors"> 
+                <h4>Помилки, які ми виявляємо та аварійні стани, якими ми запобігаємо</h4>
+                <div class="item container md-flex-down wrap">
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Аварія перенавантаження системи електропостачання</h5>
+                    <div class="error__text">
+                      <p>Наша система виявляє аварійні стани, пов'язані з перенавантаженням системи електропостачання, та надає операторам повідомлення для вжиття заходів для уникнення перегрузки та збереження нормального режиму роботи</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Аварія спрацювання ввідних фідерів</h5>
+                    <div class="error__text">
+                      <p>Ми автоматично виявляємо аварійні стани, пов'язані із спрацюванням ввідних фідерів системи електропостачання, і надаємо операторам повідомлення для швидкого вжиття заходів для їх відновлення.</p>
+                    </div>
+                  </div>
+                  <div class="error">
+                    <h5 class="error__title flex ai-center jc-center">Фіксація стрибків напруги в системі електропостачання</h5>
+                    <div class="error__text">
+                      <p>Наша система виявляє стрибки напруги в системі електропостачання та надає операторам відповідні повідомлення для уникнення можливих пошкоджень обладнання та забезпечення стабільної роботи системи.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about container" data-block="about">
       <h2>Підкорюйте нові вершини з перевіреним досвідом</h2>
       <div class="about__items flex jc-around md-flex-column-up ai-center">
         <div class="item__years years flex ai-center">
@@ -117,14 +1059,319 @@
         <p class="white">За 9 років наша компанія втілила понад 80 проектів з автоматизації та деспетчеризації у таких ключових секторах, як медичні заклади, торговельно-розважальні центри, автосалони відомих брендів, готелі світового класу, супермаркети, та рекреаційні комплекси по всій Україні. Ми гордимося нашою здатністю трансформувати звичайні простори в інтелектуальні, ефективні та безпечні середовища, які служать потребам сучасного суспільства.</p>
       </div>
     </section>
-    <section class="price flex">
-      <div class="price__image"> <img src="../../images/build.webp" alt=""/></div>
-      <div class="price__descr"> 
-        <h3 class="white">Бажаєте дізнатись вартість диспетчерезації Вашої будівлі?</h3>
-        <h4 class="white">Заповніть коротку форму і отримайте <br/> індивідуальний прорахунок</h4>
-        <button class="btn btn--white">Дізнатись вартість</button>
+    <section class="price" data-block="price">
+      <div class="flex lg-flex-column-reverse-up ai-center">
+        <div class="price__image"> <img src="../../images/build.webp" alt=""/></div>
+        <div class="price__descr container">
+          <h3 class="white">Бажаєте дізнатись вартість диспетчерезації Вашої будівлі?</h3>
+          <h4 class="white">Заповніть коротку форму і отримайте <br/> індивідуальний прорахунок</h4><a class="btn btn--white" href="/calculate.html">Дізнатись вартість</a>
+        </div>
       </div>
     </section>
+    <section class="cases container" data-block="cases">
+      <h2>Наші кейси диспетчеризації в дії</h2>
+      <div class="swiper cases-swiper">
+        <div class="cases__items swiper-wrapper">
+          <div class="item swiper-slide flip-card">
+            <div class="item__title">
+              <p>Готель Radisson Blu Hotel,</p>
+              <p>Київ, Україна, 2015</p>
+            </div>
+            <div class="item__content content flip-card-inner">
+              <div class="flip-card-front" style="--bg-img: url(../../images/case1.webp)">
+                <div class="content__title">
+                  <p>Автоматизація та Диспетчеризація наступних інженерних систем:</p>
+                </div>
+                <ul class="content__list">
+                  <li>Припливно-витяжна вентиляція</li>
+                  <li>Фанкойли/кондиціонери</li>
+                  <li>Локальні витяжні вентилятори</li>
+                  <li>Холодильні машини/холодопостачання</li>
+                  <li>Індивідуальний тепловий пункт</li>
+                  <li>Моніторинг електропостачання</li>
+                  <li>Насосна ХВС/ГВС</li>
+                  <li>Керування освітленням</li>
+                  <li>Загальні заміри</li>
+                </ul>
+              </div>
+              <div class="flip-card-back" style="--bg-img: url(../../images/case1.webp)">
+                <div class="content__title">
+                  <p>Автоматизація та Диспетчеризація наступних інженерних систем:</p>
+                </div>
+                <ul class="content__list">
+                  <li>Припливно-витяжна вентиляція</li>
+                  <li>Фанкойли/кондиціонери</li>
+                  <li>Локальні витяжні вентилятори</li>
+                  <li>Холодильні машини/холодопостачання</li>
+                  <li>Індивідуальний тепловий пункт</li>
+                  <li>Моніторинг електропостачання</li>
+                  <li>Насосна ХВС/ГВС</li>
+                  <li>Керування освітленням</li>
+                  <li>Загальні заміри</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item swiper-slide flip-card">
+            <div class="item__title">
+              <p>Автосалон Jaguar Land Rover, Київ,</p>
+              <p>Україна, 2018</p>
+            </div>
+            <div class="item__content content flip-card-inner">
+              <div class="flip-card-front" style="--bg-img: url(../../images/case2.webp)">
+                <div class="content__title">
+                  <p>Автоматизація та Диспетчеризація наступних інженерних систем:</p>
+                </div>
+                <ul class="content__list">
+                  <li>Припливно-витяжна вентиляція</li>
+                  <li>Фанкойли/кондиціонери</li>
+                  <li>Локальні витяжні вентилятори</li>
+                  <li>Холодильні машини/холодопостачання</li>
+                  <li>Індивідуальний тепловий пункт</li>
+                  <li>Керування освітленням</li>
+                  <li>Загальні заміри</li>
+                </ul>
+              </div>
+              <div class="flip-card-back" style="--bg-img: url(../../images/case2.webp)">
+                <div class="content__title">
+                  <p>Автоматизація та Диспетчеризація наступних інженерних систем:</p>
+                </div>
+                <ul class="content__list">
+                  <li>Припливно-витяжна вентиляція</li>
+                  <li>Фанкойли/кондиціонери</li>
+                  <li>Локальні витяжні вентилятори</li>
+                  <li>Холодильні машини/холодопостачання</li>
+                  <li>Індивідуальний тепловий пункт</li>
+                  <li>Керування освітленням</li>
+                  <li>Загальні заміри</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item swiper-slide flip-card">
+            <div class="item__title">
+              <p>Клініка «Добробут», Львів,</p>
+              <p>Україна, 2023</p>
+            </div>
+            <div class="item__content content flip-card-inner">
+              <div class="flip-card-front" style="--bg-img: url(../../images/case3.webp)">
+                <div class="content__title">
+                  <p>Автоматизація та Диспетчеризація наступних інженерних систем:</p>
+                </div>
+                <ul class="content__list">
+                  <li>Припливно-витяжна вентиляція</li>
+                  <li>Фанкойли/кондиціонери</li>
+                  <li>Локальні витяжні вентилятори</li>
+                  <li>Холодильні машини/холодопостачання</li>
+                  <li>Індивідуальний тепловий пункт</li>
+                  <li>Моніторинг електропостачання</li>
+                  <li>Насосна ХВС/ГВС</li>
+                  <li>Загальні заміри</li>
+                </ul>
+              </div>
+              <div class="flip-card-back" style="--bg-img: url(../../images/case3.webp)">
+                <div class="content__title">
+                  <p>Автоматизація та Диспетчеризація наступних інженерних систем:</p>
+                </div>
+                <ul class="content__list">
+                  <li>Припливно-витяжна вентиляція</li>
+                  <li>Фанкойли/кондиціонери</li>
+                  <li>Локальні витяжні вентилятори</li>
+                  <li>Холодильні машини/холодопостачання</li>
+                  <li>Індивідуальний тепловий пункт</li>
+                  <li>Моніторинг електропостачання</li>
+                  <li>Насосна ХВС/ГВС</li>
+                  <li>Загальні заміри</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item swiper-slide flip-card">
+            <div class="item__title">
+              <p>Офіс «Industrial Innovation Group LLC»,</p>
+              <p>ОАЕ, 2019</p>
+            </div>
+            <div class="item__content content flip-card-inner">
+              <div class="flip-card-front" style="--bg-img: url(../../images/case4.webp)">
+                <div class="content__title">
+                  <p>Автоматизація та Диспетчеризація наступних інженерних систем:</p>
+                </div>
+                <ul class="content__list">
+                  <li>Припливно-витяжна вентиляція</li>
+                  <li>Фанкойли/кондиціонери</li>
+                  <li>Локальні витяжні вентилятори</li>
+                  <li>Холодильні машини/холодопостачання</li>
+                  <li>Індивідуальний тепловий пункт</li>
+                  <li>Моніторинг електропостачання</li>
+                  <li>Насосна ХВС/ГВС</li>
+                  <li>Керування освітленням</li>
+                  <li>Загальні замір</li>
+                </ul>
+              </div>
+              <div class="flip-card-back" style="--bg-img: url(../../images/case4.webp)">
+                <div class="content__title">
+                  <p>Автоматизація та Диспетчеризація наступних інженерних систем:</p>
+                </div>
+                <ul class="content__list">
+                  <li>Припливно-витяжна вентиляція</li>
+                  <li>Фанкойли/кондиціонери</li>
+                  <li>Локальні витяжні вентилятори</li>
+                  <li>Холодильні машини/холодопостачання</li>
+                  <li>Індивідуальний тепловий пункт</li>
+                  <li>Моніторинг електропостачання</li>
+                  <li>Насосна ХВС/ГВС</li>
+                  <li>Керування освітленням</li>
+                  <li>Загальні замір</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item swiper-slide flip-card">
+            <div class="item__title">
+              <p>ТРЦ «Проспект»,</p>
+              <p>Київ, Україна, 2016</p>
+            </div>
+            <div class="item__content content flip-card-inner">
+              <div class="flip-card-front" style="--bg-img: url(../../images/case5.webp)">
+                <div class="content__title">
+                  <p>Автоматизація та Диспетчеризація наступних інженерних систем:</p>
+                </div>
+                <ul class="content__list">
+                  <li>Припливно-витяжна вентиляція</li>
+                  <li>Фанкойли/кондиціонери</li>
+                  <li>Локальні витяжні вентилятори</li>
+                  <li>Холодильні машини/холодопостачання</li>
+                  <li>Індивідуальний тепловий пункт</li>
+                  <li>Моніторинг електропостачання</li>
+                  <li>Насосна ХВС/ГВС</li>
+                  <li>Керування освітленням</li>
+                  <li>Загальні заміри</li>
+                  <li>Облік енергоресурсів по орендарям</li>
+                </ul>
+              </div>
+              <div class="flip-card-back" style="--bg-img: url(../../images/case5.webp)">
+                <div class="content__title">
+                  <p>Автоматизація та Диспетчеризація наступних інженерних систем:</p>
+                </div>
+                <ul class="content__list">
+                  <li>Припливно-витяжна вентиляція</li>
+                  <li>Фанкойли/кондиціонери</li>
+                  <li>Локальні витяжні вентилятори</li>
+                  <li>Холодильні машини/холодопостачання</li>
+                  <li>Індивідуальний тепловий пункт</li>
+                  <li>Моніторинг електропостачання</li>
+                  <li>Насосна ХВС/ГВС</li>
+                  <li>Керування освітленням</li>
+                  <li>Загальні заміри</li>
+                  <li>Облік енергоресурсів по орендарям</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item swiper-slide flip-card">
+            <div class="item__title">
+              <p>ТРЦ «Піраміда»,</p>
+              <p>Київ, Україна, 2020</p>
+            </div>
+            <div class="item__content content flip-card-inner">
+              <div class="flip-card-front" style="--bg-img: url(../../images/case6.webp)">
+                <div class="content__title">
+                  <p>Автоматизація та Диспетчеризація наступних інженерних систем:</p>
+                </div>
+                <ul class="content__list">
+                  <li>Припливно-витяжна вентиляція</li>
+                  <li>Фанкойли/кондиціонери</li>
+                  <li>Локальні витяжні вентилятори</li>
+                  <li>Холодильні машини/холодопостачання</li>
+                  <li>Індивідуальний тепловий пункт</li>
+                  <li>Моніторинг електропостачання</li>
+                  <li>Насосна ХВС/ГВС</li>
+                  <li>Керування освітленням</li>
+                  <li>Загальні заміри</li>
+                </ul>
+              </div>
+              <div class="flip-card-back" style="--bg-img: url(../../images/case6.webp)">
+                <div class="content__title">
+                  <p>Автоматизація та Диспетчеризація наступних інженерних систем:</p>
+                </div>
+                <ul class="content__list">
+                  <li>Припливно-витяжна вентиляція</li>
+                  <li>Фанкойли/кондиціонери</li>
+                  <li>Локальні витяжні вентилятори</li>
+                  <li>Холодильні машини/холодопостачання</li>
+                  <li>Індивідуальний тепловий пункт</li>
+                  <li>Моніторинг електропостачання</li>
+                  <li>Насосна ХВС/ГВС</li>
+                  <li>Керування освітленням</li>
+                  <li>Загальні заміри</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item swiper-slide flip-card">
+            <div class="item__title">
+              <p>Готель «Іnter Continental Kyiv»</p>
+              <p>Київ, Україна, 2021</p>
+            </div>
+            <div class="item__content content flip-card-inner">
+              <div class="flip-card-front" style="--bg-img: url(../../images/case7.webp)">
+                <div class="content__title">
+                  <p>Автоматизація та Диспетчеризація наступних інженерних систем: (Реконструкція)</p>
+                </div>
+                <ul class="content__list">
+                  <li>Припливно-витяжна вентиляція</li>
+                  <li>Фанкойли/кондиціонери</li>
+                  <li>Локальні витяжні вентилятори</li>
+                  <li>Керування освітленням</li>
+                  <li>Загальні заміри</li>
+                </ul>
+              </div>
+              <div class="flip-card-back" style="--bg-img: url(../../images/case7.webp)">
+                <div class="content__title">
+                  <p>Автоматизація та Диспетчеризація наступних інженерних систем: (Реконструкція)</p>
+                </div>
+                <ul class="content__list">
+                  <li>Припливно-витяжна вентиляція</li>
+                  <li>Фанкойли/кондиціонери</li>
+                  <li>Локальні витяжні вентилятори</li>
+                  <li>Керування освітленням</li>
+                  <li>Загальні заміри</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-scrollbar cases__scrollbar"></div>
+      </div>
+    </section>
+    <footer class="footer container" data-block="footer">
+      <h2>Залишились запитання?</h2>
+      <h4>Залишіть заявку і наш менеджер зв’яжеться з вами</h4>
+      <div class="flex jc-between lg-flex-column-up">
+        <form class="form footer-form">
+          <div class="form__contact flex wrap"> 
+            <div class="contact">
+              <p>Прізвище Ім’я</p>
+              <input class="name" type="text" name="name"/>
+            </div>
+            <div class="contact">
+              <p>Номер телефону</p>
+              <input class="phone" type="text" name="phone" pattern="+d{2} (d{3}) d{3} d{2} d{2}" id="phone"/>
+            </div>
+            <div class="contact-wide">
+              <p>Повідомлення:</p>
+              <textarea class="comment"></textarea>
+            </div>
+            <div class="form__submit flex-md ai-center jc-evenly">
+              <button class="btn btn--blue send-form" type="submit">Надіслати</button>
+              <p>*Натискаючи кнопу “Надіслати”, Ви автоматично даєте згоду на збір та обробку персональних данних </p>
+            </div>
+          </div>
+        </form>
+        <div class="contacts"><a class="contacts__btn btn btn--blue" href="tel:+4474888545">+44 74 888 18 545</a><a class="contacts__btn btn btn--blue" href="tel:+380688818245">+380 68 881 82 45</a><a class="contacts__btn btn btn--blue" href="mailto:brostltd@gmail.com">brostltd@gmail.com</a></div>
+      </div>
+    </footer>
+    <script src="js/swiper.js" async="async"></script>
     <script src="js/axios.js" async="async"></script>
     <script src="js/intlTelInput.js" async="async"></script>
     <script src="js/imask.js" async="async"></script>

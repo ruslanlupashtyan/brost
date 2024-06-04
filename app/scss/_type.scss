@@ -10,6 +10,7 @@ h5,
 h6,
 a,
 p,
+li,
 button[type="submit"],
 button,
 input,
@@ -57,6 +58,9 @@ h4 {
 
 h5 {
   @include font(18, 22, 400);
+  @include max-width(b-md) {
+    @include font(14, 16, 400);
+  }
 }
 
 p {

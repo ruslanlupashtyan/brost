@@ -1,27 +1,27 @@
 -
     var nav = [
         {
-            title: 'Головна',
+            title: 'Main',
             "link": '/'
         },
         {
-            title: 'Переваги',
+            title: 'Advantages',
             scroll: 'advantages'
         },
         {
-            title: 'Послуги',
+            title: 'Services',
             scroll: 'services'
         },
         {
-            title: 'Досвід',
+            title: 'Expirience',
             scroll: 'about'
         },
         {
-            title: 'Кейси',
+            title: 'Cases',
             scroll: 'cases'
         },
         {
-            title: 'Контакти',
+            title: 'Contacts',
             scroll: 'footer'
         },
     ]
@@ -35,13 +35,13 @@ header.header
                 for link in nav 
                     li
                         a(data-animate= link.scroll href= link.link)= link.title
-        a(href="/calculate.html").header__btn.btn.btn--white Розрахунок вартості
+        a(href="/calculate-en.html").header__btn.btn.btn--white Cost calculation
         .header__lang.togle-lang.lang.desktop-visible.flex.ai-center
-            .lang__ua
+            a(href="/index.html").lang__ua.active
                 p UA
             .lang__divider 
                 p /
-            a(href="/en.html").lang__eng.active
+            .lang__eng
                 p ENG
         .header__mobile-btn.mobile-btn.mobile-visible
             a.hamburger.mobile-hamburger
@@ -55,9 +55,9 @@ header.header
         for link in nav 
             li.list__item.item
                 a.item__link(class='header__menu--link' data-animate=link.scroll)= link.title
-    a(href="/calculate.html").header-mob__btn.btn.btn--blue Розрахунок вартості
+    a(href="/calculate-en.html").header-mob__btn.btn.btn--blue Cost calculation
     .header-mob__contacts.container.flex.lg-flex-column-up
         a(href="tel:+447488818545").contact__item +44 74 888 18 545
         a(href="tel:+380688818245").contact__item +380 68 881 82 45
         a(href="mailto:brostltd@gmail.com").contact__item brostltd@gmail.com
-    a(href="/en.html").header-mob__lang change to english
+    a(href="/index.html").header-mob__lang change to ukrainian

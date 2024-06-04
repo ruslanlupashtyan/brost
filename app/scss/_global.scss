@@ -1,10 +1,9 @@
 body {
   background: url(../images/bg.webp);
   background-attachment: fixed;
-  // padding: 64px 15px;
-  // @include max-width(b-md) {
-  //   padding: 32px 15px;
-  // }
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
   &.hidden {
     overflow: hidden;
   }

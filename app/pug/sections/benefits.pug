@@ -1,0 +1,30 @@
+-
+  var items = [
+    {
+      percent: '-20%',
+      description: 'економія енергоресурсів'
+    },
+    {
+      percent: '+100%',
+      description: 'попередження про аварійний стан'
+    },
+    {
+      percent: '-50%',
+      description: 'витрат на обслуговування'
+    },
+    {
+      percent: '+200%',
+      description: 'тривалість служби обладнання'
+    },
+  ]
+
+
+section.benefits.container
+  h2 Вигоди від контролю стану інженерних систем
+  .benefits__items.lg-flex-down.wrap.jc-between
+    for item in items
+      .item.flex.ai-center
+        .item__percent 
+          p= item.percent
+        .item__description 
+          p= item.description

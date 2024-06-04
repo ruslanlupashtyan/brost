@@ -1,12 +1,12 @@
 .header {
   position: fixed;
   width: 100%;
-  padding: 15px 0;
+  padding: 15px;
   background-color: $blue-color;
   color: $white-color;
   box-shadow: 0px 6px 18px 0px #0000001a;
   border-radius: 0px 0px 16px 16px;
-  z-index: 2;
+  z-index: 3;
   &__logo {
     svg {
       margin: 0 auto;
@@ -21,6 +21,7 @@
   }
   &__menu {
     li {
+      cursor: pointer;
       margin-right: 30px;
       &:last-child {
         margin-right: unset;
@@ -39,7 +40,15 @@
     @include max-width(b-md) {
       @include font(10, 12, 400);
       margin-left: auto;
+      margin-right: 15px;
     }
+  }
+}
+
+.calculate-header {
+  padding: 15px 0 32px;
+  a {
+    @include font(14, 16, 400);
   }
 }
 
@@ -47,6 +56,9 @@
   &__ua,
   &__divider {
     margin-right: 10px;
+  }
+  .active {
+    opacity: 0.5;
   }
 }
 .hamburger {
@@ -56,8 +68,21 @@
     width: 20px;
     background-color: $white-color;
     margin-bottom: 5px;
+    transition: ease-in-out 250ms;
     &:last-child {
       margin-bottom: unset;
+    }
+  }
+  // &.active {
+  //   span {
+  //     margin-bottom: -3px;
+  //   }
+  // }
+}
+.mobile-hamburger {
+  &.active {
+    span {
+      margin-bottom: -3px;
     }
   }
 }
@@ -68,7 +93,7 @@
   transition: ease-in-out 350ms;
   height: calc(100vh - 80px);
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 80px;
   z-index: 1;
   background-image: url(../../../images/bg.webp);
@@ -81,6 +106,7 @@
   &__btn {
     margin: 0 15px;
     margin-bottom: 26px;
+    text-align: center;
   }
   &__contacts {
     a {
@@ -105,12 +131,12 @@
     @include font(12, 14, 400);
     position: absolute;
     bottom: 24px;
-    left: calc(100% - 260px);
+    left: calc(50% - 50px);
   }
   .list {
     &__item {
-      padding: 20px 15px;
-      border-bottom: 1px solid $blue-color;
+      padding: 15px;
+      border-bottom: 1px solid $black-color;
       // &:last-child {
       //   border-bottom: unset;
       // }
@@ -122,8 +148,9 @@
     }
   }
   &.show {
-    animation: jump 5s ease-in-out;
+    // animation: jump 5s ease-in-out;
     transform: translateY(0%);
+    z-index: 2;
   }
 }
 

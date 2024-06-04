@@ -1,0 +1,32 @@
+-
+  var items = [
+    {
+      image: '../../images/adv1.webp',
+      alt: 'advantage',
+      title: 'Centralized management',
+      subtitle: 'Monitoring and control of engineering systems are carried out from any device connected to the internet.'
+    },
+    {
+      image: '../../images/adv2.webp',
+      alt: 'advantage',
+      title: 'Proprietary software',
+      subtitle: 'We have integrated the best modern technologies for diagnosing and monitoring the condition of engineering systems.'
+    },
+    {
+      image: '../../images/adv3.webp',
+      alt: 'advantage',
+      title: 'A wide range of services',
+      subtitle: 'When working with us, there is no need to find a contractor for each system. We handle everything independently and comprehensively.'
+    },
+  ]
+
+
+section(data-block="advantages").advantages.container
+  h2 Advantages of dispatching with us
+  .advantages__items.flex.xl-jc-center-down
+    for item in items
+      .item.flex.flex-column-up.jc-between(style=`--bg-img: url(${item.image})`)
+        .item__descr.descr
+          h4.white.descr__title= item.title
+          .descr__subtitle
+            p.white= item.subtitle

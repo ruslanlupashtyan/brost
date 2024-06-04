@@ -1,0 +1,52 @@
+.benefits {
+  margin-bottom: 80px;
+  &__items {
+    gap: 32px;
+    @include max-width(b-lg) {
+      justify-content: space-around;
+    }
+  }
+  .item {
+    width: calc(50% - 25px);
+    @include max-width(b-xl) {
+      width: 48%;
+    }
+    @include max-width(b-lg) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    &__percent {
+      margin-right: 16px;
+      background-color: #26b647;
+      padding: 32px 20px;
+      color: $white-color;
+      border-radius: 0 16px 0 16px;
+      @include max-width(b-xl) {
+        padding: 20px;
+      }
+      @include max-width(b-lg) {
+        width: 170px;
+        text-align: center;
+      }
+      p {
+        @include font(82, 82, 400);
+        font-family: "kharkiv";
+        @include max-width(b-xl) {
+          @include font(32, 32, 400);
+        }
+        @include max-width(b-lg) {
+          @include font(24, 24, 400);
+        }
+      }
+    }
+    &__description {
+      max-width: 235px;
+      p {
+        @include font(24, 30, 400);
+        @include max-width(b-lg) {
+          @include font(16, 20, 400);
+        }
+      }
+    }
+  }
+}

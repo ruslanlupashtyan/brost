@@ -2,6 +2,7 @@
   "name": "gulp-start",
   "version": "1.0.0",
   "description": "",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "build": "gulp build",
@@ -35,7 +36,7 @@
     "imask": "^6.4.2",
     "intl-tel-input": "^21.2.5",
     "slim-select": "^1.27.1",
-    "swiper": "^8.2.6",
+    "swiper": "^8.4.7",
     "vanilla-text-mask": "^5.1.1"
   }
 }

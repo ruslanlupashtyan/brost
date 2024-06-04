@@ -1,0 +1,153 @@
+-
+    var items = [
+        {
+          title: '1. Ventilation:',
+          subtitle: 'Ventilation availability:',
+          txt: 'Number of existing supply and exhaust systems:',
+          name: 'ventilation',
+          id_y: 'ventilation-yes',
+          id_n: 'ventilation-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '2. Local exhaust fans:',
+          subtitle: 'Presence of local exhaust fans:',
+          txt: 'Number of local exhaust fans:',
+          name: 'hood',
+          id_y: 'hood-yes',
+          id_n: 'hood-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '3. Fan coils:',
+          subtitle: 'Presence of fan coils:',
+          txt: 'Number of fan coils:',
+          name: 'funcoil',
+          id_y: 'funcoil-yes',
+          id_n: 'funcoil-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '4. Refrigeration units. Chiller and cold water supply pump:',
+          subtitle: 'Presence of refrigeration units and cold water supply pump:',
+          txt: 'Number of units:',
+          name: 'freezer',
+          id_y: 'freezer-yes',
+          id_n: 'freezer-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '5. Air conditioning system:',
+          subtitle: 'Presence of air conditioning system:',
+          txt: 'Number of indoor and outdoor units:',
+          name: 'condition',
+          id_y: 'condition-yes',
+          id_n: 'condition-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '6. Curtain control system',
+          subtitle: 'Presence of curtain control system:',
+          txt: 'Number of curtains:',
+          name: 'curtain',
+          id_y: 'curtain-yes',
+          id_n: 'curtain-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '7. Escalators, elevators:',
+          subtitle: 'Presence of escalators and elevators:',
+          txt: 'Number of installations:',
+          name: 'elevator',
+          id_y: 'elevator-yes',
+          id_n: 'elevator-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '8. Automated energy metering system. Report generation:',
+          subtitle: 'Presence of automated energy metering system and report generation:',
+          txt: 'Number of consumers:',
+          name: 'energy',
+          id_y: 'energy-yes',
+          id_n: 'energy-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '9. Lighting control system:',
+          subtitle: 'Presence of lighting control system:',
+          txt: 'Number of lighting groups:',
+          name: 'lighting',
+          id_y: 'lighting-yes',
+          id_n: 'lighting-no',
+          class: 'input-collect' 
+        },
+        {
+          title: '10. Individual heating substation:',
+          subtitle: 'Presence of individual heating substation:',
+          txt: '"Send the diagram of the ACS-UEP IPT to my email."',
+          name: 'thermal',
+          id_y: 'thermal-yes',
+          id_n: 'thermal-no',
+          class: 'input-file', 
+          filedrop: true,
+          filedrop_id: 'filedrop',
+          filedrop_name: '"Attach the diagram of the ACS-UEP IPT."'
+        }
+    ]
+h2.form__title Fill out the form #[br] for the preliminary cost calculation #[br] of dispatching your building
+form.form.tg-form
+  .form__items 
+    for item in items
+      .item(class= item.class)
+        .item__title 
+          p= item.title
+        .item__subtitle
+          p= item.subtitle
+        .item__radio.flex
+          input(type="radio", class="input-yes" name=item.name id=item.id_y value="Yes")
+          label(class="show-input" for=item.id_y) Yes
+          input(type="radio", class="input-no" name=item.name id=item.id_n value="No") 
+          label(class="hide-input" for=item.id_n) No
+        .item__hidden
+          if (item.filedrop == true) 
+            p "Send the diagram of the ACS-UEP IPT." <span>(automated process control system for an individual heating station)</span> to mail
+            
+            a(href="mailto:brostltd@gmail.com") brostltd@gmail.com 
+            //- input(type="file", id=item.filedrop_id)
+            //- label(for=item.filedrop_id)= item.filedrop_name
+          else 
+            p= item.txt
+            input(type="number", pattern="[0-9]*")
+  .form__contact.contacts.flex.wrap
+    .contact
+      p Name Surname
+      input(type="text", class="name", name="name")
+    .contact
+      p Phone number
+      input(type="text", class="phone", name="phone" pattern="\+\d{2} \(\d{3}\) \d{3} \d{2} \d{2}" id='phone')
+    .contact
+      p Object name
+      input(type="text" class='objname')
+    .contact
+      p Address of the object
+      input(type="text", class='address' name="address")
+    .contact-wide
+      p More information:
+      textarea(class='comment') 
+  .form__submit.flex-md.ai-center.jc-evenly
+    button.btn.btn--blue.send-form(type="submit") Submit
+    p *By clicking the ‘Submit’ button, you automatically consent to the collection and processing of personal data 
+.form-preloader.hidden
+  .circle
+    .circle-loader-wrap
+      .left-wrap
+        .loader
+      .right-wrap
+        .loader
+.success.hidden.flex.ai-center.jc-center
+  .success__content
+    include ../../images/logo.svg
+    p Thank you for your application.
+    p Our manager will contact you shortly
+
+    button.btn.btn--blue.close OK

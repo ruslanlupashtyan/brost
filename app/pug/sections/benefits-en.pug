@@ -1,0 +1,30 @@
+-
+  var items = [
+    {
+      percent: '-20%',
+      description: 'Energy resource savings'
+    },
+    {
+      percent: '+100%',
+      description: 'Emergency condition prevention'
+    },
+    {
+      percent: '-50%',
+      description: 'Maintenance costs'
+    },
+    {
+      percent: '+200%',
+      description: 'Equipment lifespan'
+    },
+  ]
+
+
+section.benefits.container
+  h2 Benefits from monitoring the condition of engineering systems
+  .benefits__items.lg-flex-down.wrap.jc-between
+    for item in items
+      .item.flex.ai-center
+        .item__percent 
+          p= item.percent
+        .item__description 
+          p= item.description

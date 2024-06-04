@@ -1,9 +1,19 @@
 .advantages {
-  overflow: hidden;
-  // &__items {
-  // }
+  margin-bottom: 80px;
+  overflow-x: hidden;
+  h4 {
+    @include max-width(b-lg) {
+      @include font(14, 17, 400);
+    }
+  }
   .item {
+    background-image: var(--bg-img);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: top;
     padding: 20px;
+    padding-top: 220px;
     min-width: 350px;
     background-color: $blue-color;
     border-radius: 17px;
@@ -12,10 +22,14 @@
     &:last-child {
       margin-right: unset;
     }
+    @include max-width(b-xl) {
+      min-width: calc(33% - 16px);
+      margin-right: 16px;
+    }
     @include max-width(b-md) {
       min-width: 250px;
       padding: 10px 15px;
-      margin-right: 16px;
+      padding-top: 170px;
       &:last-child {
         margin-right: unset;
       }

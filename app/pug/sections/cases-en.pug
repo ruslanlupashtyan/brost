@@ -1,0 +1,141 @@
+-
+ var cases = [
+  { 
+    image: "../../images/case1.webp",
+    title: "Radisson Blu Hotel,",
+    address: "Kyiv, Ukraine, 2015",
+    content_title: "Automation and Dispatching of the following engineering systems:",
+    content_list: [
+      "Supply and exhaust ventilation",
+      "Fan coils/air conditioners",
+      "Local exhaust fans",
+      "Refrigeration units/refrigeration supply",
+      "Individual heating substation",
+      "Electric power monitoring",
+      "Cold water supply pump / Hot water supply pump",
+      "Lighting control",
+      "General measurements"
+    ]
+  },
+  { 
+    image: "../../images/case2.webp",
+    title: "Car showroom Jaguar Land Rover, Київ,",
+    address: "Ukraine, 2018",
+    content_title: "Automation and Dispatching of the following engineering systems:",
+    content_list: [
+      "Supply and exhaust ventilation",
+      "Fan coils/air conditioners",
+      "Local exhaust fans",
+      "Refrigeration units/refrigeration supply",
+      "Individual heating substation",
+      "Lighting control",
+      "General measurements",
+    ]
+  },
+  { 
+    image: "../../images/case3.webp",
+    title: "Dobrobut Clinic, Lviv,",
+    address: "Ukraine, 2023",
+    content_title: "Automation and Dispatching of the following engineering systems:",
+    content_list: [
+      "Supply and exhaust ventilation",
+      "Fan coils/air conditioners",
+      "Local exhaust fans",
+      "Refrigeration units/refrigeration supply",
+      "Individual heating substation",
+      "Electric power monitoring",
+      "Cold water supply pump / Hot water supply pump",
+      "General measurements",
+    ]
+  },
+  { 
+    image: "../../images/case4.webp",
+    title: "Office «Industrial Innovation Group LLC»,",
+    address: "UAE, 2019",
+    content_title: "Automation and Dispatching of the following engineering systems:",
+    content_list: [
+      "Supply and exhaust ventilation",
+      "Fan coils/air conditioners",
+      "Local exhaust fans",
+      "Refrigeration units/refrigeration supply",
+      "Individual heating substation",
+      "Electric power monitoring",
+      "Cold water supply pump / Hot water supply pump",
+      "Lighting control",
+      "General measurements",
+    ]
+  },
+  { 
+    image: "../../images/case5.webp",
+    title: "Prospekt shopping centre,",
+    address: "Kyiv, Ukraine, 2016",
+    content_title: "Automation and Dispatching of the following engineering systems:",
+    content_list: [
+      "Supply and exhaust ventilation",
+      "Fan coils/air conditioners",
+      "Local exhaust fans",
+      "Refrigeration units/refrigeration supply",
+      "Individual heating substation",
+      "Electric power monitoring",
+      "Cold water supply pump / Hot water supply pump",
+      "Lighting control",
+      "General measurements",
+      "Energy resource accounting by tenants",
+    ]
+  },
+  { 
+    image: "../../images/case6.webp",
+    title: "Pyramid shopping centre,",
+    address: "Kyiv, Ukraine, 2020",
+    content_title: "Automation and Dispatching of the following engineering systems:",
+    content_list: [
+      "Supply and exhaust ventilation",
+      "Fan coils/air conditioners",
+      "Local exhaust fans",
+      "Refrigeration units/refrigeration supply",
+      "Individual heating substation",
+      "Electric power monitoring",
+      "Cold water supply pump / Hot water supply pump",
+      "Lighting control",
+      "General measurements",
+    ]
+  },
+  { 
+    image: "../../images/case7.webp",
+    title: "Hotel «Іnter Continental Kyiv»",
+    address: "Kyiv, Ukraine, 2021",
+    content_title: "Automation and Dispatching of the following engineering systems: (Reconstruction)",
+    content_list: [
+      "Supply and exhaust ventilation",
+      "Fan coils/air conditioners",
+      "Local exhaust fans",
+      "Lighting control",
+      "General measurements",
+    ]
+  },
+ ]
+
+
+section(data-block="cases").cases.container
+  h2 Our dispatching case studies in action
+  .swiper.cases-swiper
+    .cases__items.swiper-wrapper
+      for item in cases
+        .item.swiper-slide.flip-card
+          .item__title
+            p= item.title 
+            p= item.address 
+          .item__content.content.flip-card-inner
+            .flip-card-front(style=`--bg-img: url(${item.image})`)
+              .content__title
+                p= item.content_title
+              ul.content__list
+                for list in item.content_list
+                  li= list
+            .flip-card-back(style=`--bg-img: url(${item.image})`)
+              .content__title
+                p= item.content_title
+              ul.content__list
+                for list in item.content_list
+                  li= list
+    .swiper-scrollbar.cases__scrollbar

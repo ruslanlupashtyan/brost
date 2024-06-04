@@ -1,21 +1,21 @@
 footer(data-block="footer").footer.container
-  h2 Залишились запитання?
-  h4 Залишіть заявку і наш менеджер зв’яжеться з вами
+  h2 Do you have any questions?
+  h4 Leave a request and our manager will contact you
   .flex.jc-between.lg-flex-column-up
     form.form.footer-form
       .form__contact.flex.wrap 
         .contact
-          p Прізвище Ім’я
+          p Surname Name
           input(type="text", class="name", name="name")
         .contact
-          p Номер телефону
+          p Phone number
           input(type="text", class="phone", name="phone" pattern="\+\d{2} \(\d{3}\) \d{3} \d{2} \d{2}" id='phone')
         .contact-wide
-          p Повідомлення:
+          p Message:
           textarea(class='comment')
         .form__submit.flex-md.ai-center.jc-evenly
-          button.btn.btn--blue.send-form(type="submit") Надіслати
-          p *Натискаючи кнопу “Надіслати”, Ви автоматично даєте згоду на збір та обробку персональних данних 
+          button.btn.btn--blue.send-form(type="submit") Submit
+          p *By clicking the ‘Submit’ button, you automatically consent to the collection and processing of personal data 
     .contacts
       a.contacts__btn.btn.btn--blue(href="tel:+4474888545") +44 74 888 18 545
       a.contacts__btn.btn.btn--blue(href="tel:+380688818245") +380 68 881 82 45

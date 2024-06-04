@@ -1,0 +1,156 @@
+.services {
+  .container {
+    padding: unset;
+    max-width: 1410px;
+  }
+  &__tabs {
+    position: relative;
+  }
+  &__tab-list {
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1px;
+    @include max-width(b-xl) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include max-width(b-lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include max-width(b-md) {
+      position: absolute;
+      top: 50px;
+      display: block;
+      width: 100%;
+      left: -100%;
+      height: 0;
+      overflow: hidden;
+      transition: ease-in-out 550ms;
+      &.show {
+        left: 0;
+        height: 600px;
+      }
+    }
+  }
+  &__items {
+    @include max-width(b-md) {
+      padding: 0 15px;
+    }
+    // .items {
+    //   overflow-x: scroll;
+    //   @include max-width(b-md) {
+    //     overflow: unset;
+    //   }
+    // }
+  }
+  .tab {
+    height: 62px;
+    padding: 14px 0;
+    @include font(13, 16, 400);
+    background-color: $blue-color;
+    color: $white-color;
+    text-align: center;
+    border-radius: 8px 0 8px 0;
+    cursor: pointer;
+    &.active {
+      background-color: $black-color;
+      position: relative;
+      @include max-width(b-md) {
+        &::after {
+          content: url(../../images/eye.svg);
+          position: absolute;
+          right: 20px;
+          display: block;
+        }
+      }
+    }
+    @include max-width(b-md) {
+      height: 50px;
+      border-radius: unset;
+      border-bottom: 1px solid $white-color;
+      text-align: left;
+      padding-right: 75px;
+      padding-left: 15px;
+    }
+  }
+  .tab-mobile {
+    @include min-width(b-md) {
+      display: none;
+    }
+    background-color: $black-color;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 16px;
+    padding: 15px;
+    .hamburger {
+      margin-right: 10px;
+    }
+  }
+  .hamburger {
+    width: 20px;
+    span {
+      transition: ease-in-out 250ms;
+      &:nth-child(2) {
+        width: 75%;
+      }
+      &:nth-child(3) {
+        width: 50%;
+      }
+    }
+    &.active {
+      span {
+        width: 100%;
+      }
+    }
+  }
+  .service {
+    display: none;
+    &__items {
+      // overflow: hidden;
+      padding-top: 40px;
+    }
+    &.active {
+      display: block;
+    }
+    &__title {
+      text-align: center;
+    }
+  }
+  .functions {
+    h5 {
+      background-color: $blue-color;
+    }
+  }
+  .errors {
+    h5 {
+      background-color: #26b647;
+    }
+  }
+  h4 {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  h5 {
+    color: $white-color;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 8px 15px;
+    @include max-width(b-lg) {
+      border-radius: 8px 0 8px 0;
+    }
+  }
+  .function,
+  .error {
+    width: calc(50% - 16px);
+    &:nth-child(odd) {
+      margin-right: 32px;
+    }
+    &__text p {
+      margin-bottom: 16px;
+    }
+    @include max-width(b-md) {
+      width: 100%;
+      margin-right: unset;
+    }
+  }
+}

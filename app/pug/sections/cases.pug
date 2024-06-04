@@ -2,7 +2,8 @@
  var cases = [
   { 
     image: "../../images/case1.webp",
-    title: "Готель Radisson Blu Hotel, Київ, Україна, 2015",
+    title: "Готель Radisson Blu Hotel,",
+    address: "Київ, Україна, 2015",
     content_title: "Автоматизація та Диспетчеризація наступних інженерних систем:",
     content_list: [
       "Припливно-витяжна вентиляція",
@@ -18,7 +19,8 @@
   },
   { 
     image: "../../images/case2.webp",
-    title: "Автосалон Jaguar Land Rover, Київ, Україна, 2018",
+    title: "Автосалон Jaguar Land Rover, Київ,",
+    address: "Україна, 2018",
     content_title: "Автоматизація та Диспетчеризація наступних інженерних систем:",
     content_list: [
       "Припливно-витяжна вентиляція",
@@ -32,7 +34,8 @@
   },
   { 
     image: "../../images/case3.webp",
-    title: "Клініка «Добробут», Львів, Україна, 2023",
+    title: "Клініка «Добробут», Львів,",
+    address: "Україна, 2023",
     content_title: "Автоматизація та Диспетчеризація наступних інженерних систем:",
     content_list: [
       "Припливно-витяжна вентиляція",
@@ -47,7 +50,8 @@
   },
   { 
     image: "../../images/case4.webp",
-    title: "Офіс «Industrial Innovation Group LLC», ОАЕ, 2019",
+    title: "Офіс «Industrial Innovation Group LLC»,",
+    address: "ОАЕ, 2019",
     content_title: "Автоматизація та Диспетчеризація наступних інженерних систем:",
     content_list: [
       "Припливно-витяжна вентиляція",
@@ -63,7 +67,8 @@
   },
   { 
     image: "../../images/case5.webp",
-    title: "ТРЦ «Проспект», Київ, Україна, 2016",
+    title: "ТРЦ «Проспект»,",
+    address: "Київ, Україна, 2016",
     content_title: "Автоматизація та Диспетчеризація наступних інженерних систем:",
     content_list: [
       "Припливно-витяжна вентиляція",
@@ -80,7 +85,8 @@
   },
   { 
     image: "../../images/case6.webp",
-    title: "ТРЦ «Піраміда», Київ, Україна, 2020",
+    title: "ТРЦ «Піраміда»,",
+    address: "Київ, Україна, 2020",
     content_title: "Автоматизація та Диспетчеризація наступних інженерних систем:",
     content_list: [
       "Припливно-витяжна вентиляція",
@@ -96,7 +102,8 @@
   },
   { 
     image: "../../images/case7.webp",
-    title: "Готель «Іnter Continental Kyiv» Київ, Україна, 2021",
+    title: "Готель «Іnter Continental Kyiv»",
+    address: "Київ, Україна, 2021",
     content_title: "Автоматизація та Диспетчеризація наступних інженерних систем: (Реконструкція)",
     content_list: [
       "Припливно-витяжна вентиляція",
@@ -109,16 +116,26 @@
  ]
 
 
-section.cases 
+section(data-block="cases").cases.container
   h2 Наші кейси диспетчеризації в дії
-  .cases__items
-    for item in cases
-      .item 
-        .item__title
-          p= item.title 
-        .item__content.content
-          .content__title
-            p= item.content_title
-          ul.content__list
-            for list in item.content_list
-              li= list
+  .swiper.cases-swiper
+    .cases__items.swiper-wrapper
+      for item in cases
+        .item.swiper-slide.flip-card
+          .item__title
+            p= item.title 
+            p= item.address 
+          .item__content.content.flip-card-inner
+            .flip-card-front(style=`--bg-img: url(${item.image})`)
+              .content__title
+                p= item.content_title
+              ul.content__list
+                for list in item.content_list
+                  li= list
+            .flip-card-back(style=`--bg-img: url(${item.image})`)
+              .content__title
+                p= item.content_title
+              ul.content__list
+                for list in item.content_list
+                  li= list
+    .swiper-scrollbar.cases__scrollbar

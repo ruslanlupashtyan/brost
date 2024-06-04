@@ -1,0 +1,19 @@
+
+doctype html    
+html(lang="en")
+    include pug/sections/global/head.pug
+    body
+      header.calculate-header.flex.ai-center.jc-around
+        a(href="/en.html") Return to main 
+        include images/logo-blue.svg
+        .calculate-header__lang.togle-lang.lang.desktop-visible.flex.ai-center
+            a(href="/calculate.html").link.lang__ua.active
+                p UA
+            .lang__divider 
+                p /
+            .lang__eng
+                p ENG
+      include pug/sections/form-en.pug
+    script(src="js/axios.js" async)
+    script(src="js/intlTelInput.js" async)
+    script(src="js/main.js" defer)

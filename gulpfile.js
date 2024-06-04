@@ -120,6 +120,7 @@ function build() {
       "app/js/imask.js",
       "app/js/intlTelInput.js",
       "app/js/axios.js",
+      "app/js/swiper.js",
       "app/**/*.html",
     ],
     { base: "app" }

@@ -1,0 +1,578 @@
+-
+  var services = [
+    //1 NEW TAB Приточно-витяжна вентиляція
+    {
+      tab_title: 'Supply and exhaust ventilation',
+      tab_head: 'Dispatching of supply and exhaust ventilation',
+      tab_class: 'active',
+      functions: [
+        {
+          title: 'Visual display of the technological process',
+          text: 'We provide a user-friendly interface for visually tracking and analysing various aspects of the process. Customers can monitor parameters, equipment status and efficiency in real time.',
+        },
+        {
+          title: 'Prompt change of process parameters, operating modes, equipment',
+          text: 'We provide the ability to quickly change system parameters and operating modes depending on changing production conditions or other factors. This allows you to optimise the system to achieve the best possible performance.',
+        },
+        {
+          title: 'Remote monitoring and control of system operation',
+          text: 'Our systems provide remote control, monitoring and management of engineering systems from any location. This allows you to quickly respond to changes and adjust parameters through our platforms.',
+        },
+        {
+          title: 'Prompt notification of emergency conditions and exceeding the limits of the technological operating schedule',
+          text: 'Our systems instantly alert you to any emergency or deviation from normal operation. This allows us to respond quickly to problems and ensure uninterrupted operations',
+        },
+        {
+          title: 'Work on schedule',
+          text: 'We ensure that the systems schedules are followed precisely, which helps to plan production processes and optimise resource use',
+        },
+        {
+          title: 'Maintaining a work history log with event recording',
+          text: 'We guarantee precise adherence to the systems operation schedule, which allows us to plan production processes and optimise resource use.',
+        }
+      ],
+      errors: [
+        {
+          title: 'Failure of the heat exchanger to freeze / overheating of the electric heater',
+          text: 'Our systems react instantly to any temperature deviations that could lead to a heat exchanger freezing or an electric heater overheating. We automatically shut down or adjust the equipment to avoid emergency situations.',
+        },
+        {
+          title: 'Supply/exhaust fan pressure drop alarm condition',
+          text: 'Our systems monitor the operation of the fans and detect any pressure deviations. If an alarm condition is detected, we automatically shut down the fans and send a notification for further diagnosis and correction.',
+        },
+        {
+          title: 'Supply/exhaust filter clogging failure',
+          text: 'Our systems monitor the condition of utility system filters and detect any blockages. If a problem is detected, we send a notification and can automatically start the filter cleaning or replacement process.',
+        },
+        {
+          title: 'Warning about going out of the control range',
+          text: 'Our systems reliably monitor the parameters of engineering systems and detect any deviations from the set values. If an out-of-range condition is detected, we immediately notify you and automatically take the necessary measures to stabilise the situation.',
+        }
+      ]
+    },
+    //2 NEW TAB Локально витяжні вентилятори
+    {
+      tab_title: 'Locally exhaust fans',
+      tab_head: 'Dispatching the operation of locally extracted fans',
+      functions: [
+        {
+          title: 'Visual display of the technological process',
+          text: 'We provide an interface that allows users to track the operation of local exhaust fans and their impact on the process',
+        },
+        {
+          title: 'Prompt notification of emergency conditions',
+          text: 'The system automatically notifies you of any alarm conditions or unusual deviations in the operation of the fans',
+        },
+        {
+          title: 'Remote monitoring and control of fans',
+          text: 'Our system allows you to remotely monitor the status, efficiency and control the operation of exhaust fans from any location. Users can remotely turn on, turn off and adjust the operating parameters of local exhaust fans through our platform.',
+        },
+        {
+          title: 'Keeping a log of the operation history with event logging',
+          text: 'The system keeps a detailed log of the fans operation with event logging, which allows you to track their operation and identify possible problems',
+        },
+        {
+          title: 'Scheduled operation',
+          text: 'We guarantee that fans run according to a set schedule, which helps to optimise their efficiency',
+        },
+        {
+          title: 'Economical use of energy resources',
+          text: 'We ensure optimal use of electricity by running fans according to a schedule, which helps to reduce energy costs',
+        }
+      ],
+      errors: [
+        {
+          title: 'Monitoring the operation of ventilation equipment',
+          text: 'Our system constantly monitors the condition of exhaust fans, filters and other components. If any malfunction or abnormality is detected, the system immediately notifies operators.',
+        },
+        {
+          title: 'Automatic alarm detection',
+          text: 'Our equipment systems automatically detect possible emergency situations such as overloaded fans or clogged filters. This allows operators to react quickly and take the necessary measures to fix the problem.',
+        },
+        {
+          title: 'Informing about the status of the equipment',
+          text: 'In addition to detecting faults, our system provides detailed information about the condition of the equipment, including operating history and warnings of potential problems. This allows operators to take preventive measures and prevent serious breakdowns from occurring.',
+        }
+      ]
+    },
+    //3 NEW TAB Системи кондиціювання (Кондиціонери VRV/VRF, фанкойли)
+    {
+      tab_title: 'Air conditioning systems (VRV/VRF air conditioners, fan coil units)',
+      tab_head: 'Dispatching the air conditioning system (VRV/VRF air conditioners, fan coil units)',
+      functions: [
+        {
+          title: 'Visual display of the technological process',
+          text: 'We provide the ability to visually display the technological process of the air conditioning system, which allows operators to easily monitor the condition and efficiency of the equipment',
+        },
+        {
+          title: 'Quick change of process parameters and settings',
+          text: 'Our system provides the ability to quickly change the process parameters and settings of air conditioning systems if necessary, which allows them to quickly adapt to changing operating conditions',
+        },
+        {
+          title: 'Scheduled operation',
+          text: 'Our system ensures the operation of air conditioning systems in accordance with a given schedule, which allows efficient use of resources and provides comfortable conditions in the premises at certain hours',
+        },
+          {
+          title: 'Notification of operating procedure alarms',
+          text: 'We provide prompt notification of any emergency conditions or exceeding the technological limits of the air conditioning system operation for prompt response and problem solving',
+        },
+        {
+          title: 'Remote monitoring and control of system operation',
+          text: 'Our system allows you to remotely monitor and control the operation of air conditioning systems from any location, providing operators with quick access to important information and control of parameters and operating modes',
+        },
+        {
+          title: 'Keeping a log of the operation history with event recording',
+          text: 'We provide a log of the air conditioning systems operation history, recording all important events and changes in equipment operation for further analysis and improvement',
+        }
+      ],
+      errors: [
+        {
+          title: 'Filter clogging failure',
+          text: 'Our system detects filter clogging alarms and provides operators with notifications to take immediate action to clean or replace filters, helping to avoid reducing the efficiency of air conditioning systems and ensure healthy indoor environments.',
+        },
+        {
+          title: 'Out of range warning',
+          text: 'Our system detects any malfunctions in the operation of individual lighting groups, such as lamp failure, electrical network problems, etc. and reports them immediately. This allows us to respond quickly and fix problems to ensure uninterrupted lighting operation',
+        },
+        {
+          title: 'Normal error codes and service requirements (for air conditioners)',
+          text: 'Our system automatically generates routine error codes and service notifications for air conditioners, allowing operators to take timely preventive measures and avoid serious problems in the future',
+        }
+      ]
+    },
+    //4 NEW TAB Системи холодопостачання /холодорозподільної системи
+    {
+        tab_title: 'Refrigeration / cooling distribution systems',
+      tab_head: 'Dispatching of chiller/refrigerator operation. Refrigeration supply systems / cooling distribution system',
+      functions: [
+        {
+          title: 'Visual display of the technological process',
+          text: 'We provide the ability to visually display the technological process of the chiller or chiller and the refrigeration/cooling distribution system, which allows operators to effectively monitor their condition and operation',
+        },
+        {
+          title: 'Remote monitoring of system operation',
+          text: 'Our system provides the ability to remotely monitor the operation of the chiller or chiller and the refrigeration/cooling distribution system, allowing operators to monitor their operation in real time',
+        },
+        {
+          title: 'Remote control of system operation',
+          text: 'We provide the ability to remotely control the operation of the chiller or chiller and refrigeration/cooling distribution system, including switching on, off and adjusting parameters, allowing operators to effectively manage them',
+        },
+          {
+          title: 'Operational change of technological parameters and settings',
+          text: 'Our system allows you to quickly change the process parameters and system operation settings depending on the needs, which allows you to adapt them to changing operating conditions',
+        },
+        {
+          title: 'Prompt notification of emergency conditions',
+          text: 'We provide prompt notification of any emergency conditions or exceeding the technological regulations of the system operation for quick response and elimination of problems',
+        }
+      ],
+      errors: [
+        {
+          title: 'Circulation pump failure',
+          text: 'Our system detects alarm conditions related to faulty or failed circulation pumps and provides notifications to operators to take immediate action to repair or replace them.',
+        },
+        {
+          title: 'System pressure loss event',
+          text: 'We automatically detect and notify operators when there is a loss of pressure in the refrigeration/cooling distribution system, allowing them to take immediate action to restore pressure and avoid system interruptions',
+        },
+        {
+          title: 'Out of range warning',
+          text: 'Our system automatically alerts you to any instances of system parameters going out of range, allowing operators to take prompt corrective action and prevent serious damage',
+        },
+        {
+          title: 'Output of normal chiller alarms',
+          text: 'Our system provides notifications of normal chiller or chiller alarm conditions, such as overheating or low cooling levels, allowing operators to respond quickly and prevent further equipment problems',
+        }
+      ]
+    },
+    //5 NEW TAB Теплові завіси
+    {
+      tab_title: 'Heat curtains',
+      tab_head: 'Dispatching the operation of heat curtains',
+      functions: [
+        {
+          title: 'Visual display of the technological process',
+          text: 'We provide the ability to visually display the technological process of the heat curtain operation, which allows operators to monitor their activities and detect any anomalies in time',
+        },
+        {
+          title: 'Remote monitoring and control of curtain operation',
+          text: 'Our system provides the ability to remotely monitor and control air curtains. Operators can monitor their efficiency and functioning in real time, as well as remotely control them and respond to changes and needs.',
+        },
+        {
+          title: 'Prompt change of process parameters, operating modes, settings',
+          text: 'Our system allows you to quickly change the technological parameters, operating modes and setpoints of air curtains, which allows you to quickly adapt them to changing conditions',
+        },
+        {
+          title: 'Prompt notification of emergency conditions',
+          text: 'We provide prompt notification of any emergency conditions and deviations from the technological regulations of the heat curtain operation, which allows operators to respond immediately to problems and avoid serious consequences',
+        }
+      ],
+      errors: [
+        {
+          title: 'Heat curtain overheating alarm',
+          text: 'Our system detects an overheating alarm condition of the air curtains and provides operators with a notification so they can take action to cool down and avoid further damage',
+        },
+        {
+          title: 'Loss of communication with heat curtains',
+          text: 'We detect cases of loss of communication with heat curtains and provide operators with notifications to restore communication and ensure continuous system operation.',
+        },
+        {
+          title: 'Insufficient hot air pressure or volume.',
+          text: 'The system detects an error in case of insufficient pressure or volume of hot air supplied by the air curtains and immediately notifies the operators for further action.'
+        },
+        {
+          title: 'Exceeding the permissible energy consumption values',
+          text: 'We detect an alarm condition if the energy consumption of the air curtain exceeds the permissible values and provide operators with information to adjust the system',
+        }
+      ]
+    },
+    //6 NEW TAB Індивідуальні теплові пункти /теплорозподільні системи
+    {
+      tab_title: 'Individual heat points / heat distribution systems',
+      tab_head: 'Dispatching the operation of an individual heating point/heat distribution system',
+      functions: [
+        {
+          title: 'Visual display of the technological process',
+          text: 'We provide the ability to visually display the technological process of an individual heating point or heat distribution system, which allows operators to effectively monitor their condition and operation',
+        },
+        {
+          title: 'Operational change of technological parameters and settings',
+          text: 'Our system provides the ability to quickly change the process parameters and settings of air conditioning systems as needed, which allows them to quickly adapt to changing operating conditions',
+        },
+        {
+          title: 'Remote monitoring and control of system operation',
+          text: 'Our system provides remote monitoring and control of an individual heating point or heat distribution system. Operators can control their operation in real time, including switching them on, off and adjusting parameters for efficient management.'
+        },
+        {
+          title: 'Prompt notification of emergency conditions',
+          text: 'We provide prompt notification of any emergency conditions or out-of-range system operation for quick response and troubleshooting',
+        },
+        {
+          title: 'Work on schedule',
+          text: 'Our system ensures the operation of an individual heating point or heat distribution system in accordance with a given schedule, which allows efficient use of resources and provides comfortable conditions in the premises at certain hours',
+        }
+      ],
+      errors: [
+        {
+          title: 'Circulation pump failure',
+          text: 'Our system detects alarm conditions related to faulty or failed circulation pumps and provides notifications to operators to take immediate action to repair or replace them.'
+        },
+        {
+          title: 'System pressure loss event',
+          text: 'We automatically detect and provide notifications when there is a loss of pressure in the heat distribution system, allowing operators to take immediate action to restore pressure and avoid system interruptions',
+        },
+        {
+          title: 'Out of range warning',
+          text: 'Our system automatically notifies you whenever system parameters are out of range, allowing operators to take prompt corrective action and prevent serious damage',
+        },
+        {
+          title: 'Equipment safety in case of critical and emergency situations',
+          text: 'In the event of critical or emergency situations, our system automatically takes measures to save equipment, including shutting down or limiting operation, to prevent serious damage and ensure continued reliable operation',
+        }
+      ]
+    },
+    //6!!! NEW TAB 
+    {
+      tab_title: 'Heating system (radiators, underfloor heating)',
+      tab_head: 'Dispatching the heating system (radiators, underfloor heating)',
+      functions: [
+        {
+          title: 'Operational temperature monitoring',
+          text: 'We provide operational monitoring of the temperature in the premises using sensors installed on radiators and underfloor heating, which allows you to control and adjust the temperature to ensure comfort',
+        },
+        {
+          title: 'Adjusting the operating mode of the heating system',
+          text: 'We automatically regulate the heating system according to the set parameters and schedules, ensuring the optimal level of heat in the rooms with minimal energy consumption',
+        },
+        {
+          title: 'Generating reports on heat consumption',
+          text: 'We automatically generate reports containing information about the heat consumption for the selected period, which allows you to analyse the efficiency of the heating system and plan expenses',
+        },
+        {
+          title: 'Simplifying life and optimising costs',
+          text: 'Providing information about the operation of the heating system in the form of clear reports helps to manage costs and optimise the use of thermal resources. This allows you to distribute heat more efficiently, reduce costs and increase user comfort.'
+        },
+      ],
+      errors: [
+        {
+          title: 'Overheating or underheating of the premises',
+          text: 'We detect when rooms are overheated or underheated and automatically adjust the heating system to maintain the optimum temperature, preventing energy waste and discomfort.'
+        },
+        {
+          title: 'Temperature sensor malfunction',
+          text: 'We detect malfunctioning temperature sensors and automatically notify you when they need to be serviced or replaced, which helps to avoid inaccurate measurements and ensure correct operation of the system',
+        },
+        {
+          title: 'Violation of the coolant circulation',
+          text: 'We detect disturbances in the circulation of the coolant (airiness, contamination) and automatically notify you of them to take measures to eliminate them and ensure stable operation of the system',
+        },
+        {
+          title: 'Energy overrun',
+          text: ' We detect energy overruns due to incorrect settings or system malfunctions and provide recommendations for their elimination, which helps to reduce heating costs',
+        }
+      ]
+    },
+
+
+    //7 NEW TAB Насосні системи ГВС/ХВС
+    {
+      tab_title: 'Pumping systems for hot water and domestic hot water',
+      tab_head: 'Dispatching the operation of the DHW/CW pumping system',
+      functions: [
+        {
+          title: 'Visual display of the technological process',
+          text: 'We provide the ability to visually view the operation of the DHW/CW pumping system through the control interface, allowing operators to easily monitor the status of the system',
+        },
+        {
+          title: 'Remote monitoring and control of system operation',
+          text: 'Our system provides the ability to remotely monitor and control air curtains. Operators can monitor their performance and functioning in real time, as well as remotely control them and respond to changes and needs.'
+        },
+        {
+          title: 'Prompt change of process parameters, operating modes, settings',
+          text: 'We provide the ability to quickly change the technological parameters, operating modes and settings of the DHW/CW pumping system in order to optimise its operation',
+        },
+        {
+          title: 'Prompt notification of emergency conditions',
+          text: 'We provide prompt notification of any emergency conditions and deviations from the technological regulations of the DHW/CW pumping system so that operators can respond immediately',
+        }
+      ],
+      errors: [
+        {
+          title: 'Circulation pumps failure',
+          text: 'We detect circulation pump failures and take steps to repair or replace them quickly to ensure the system continues to function smoothly',
+        },
+        {
+          title: 'System pressure loss alarm',
+          text: 'We detect a system pressure loss alarm condition and automatically initiate the process of identifying and eliminating the causes of this condition to ensure normal operation',
+        },
+        {
+          title: 'Out of range warning',
+          text: 'We detect any instances of the DHW/CW pumping system operating outside the control range and immediately notify operators to take the necessary action',
+        },
+        {
+          title: 'Output of normal alarms of the pumping system',
+          text: 'We provide information about normal alarm conditions of the DHW/CW pumping system so that operators can react in time and avoid negative consequences',
+        }
+      ]
+    },
+    //8 NEW TAB Системи освітлення
+    {
+      tab_title: 'Lighting systems',
+      tab_head: 'Dispatching the operation of the lighting system',
+      functions: [
+        {
+          title: 'Remote monitoring and control of lighting groups',
+          text: 'Our system provides the ability to remotely monitor and control the operation of various lighting groups from any location. This allows operators to control the status, efficiency, switching on, off and dimming of lighting, ensuring that the premises are optimally lit according to their needs.'
+        },
+        {
+          title: 'Scheduled operation',
+          text: 'We ensure that lighting operates according to a set schedule, which allows for efficient use of resources and provides comfortable lighting at specified hours',
+        },
+        {
+          title: 'Operation according to the lighting algorithm',
+          text: 'Our system operates according to algorithms that take into account the level of natural light and the needs of users, providing optimal lighting in the premises under any conditions',
+        },
+        {
+          title: 'Economical use of energy resources',
+          text: 'We use electricity efficiently by running lighting on a schedule and using energy-efficient control algorithms, which reduces energy consumption',
+        }
+      ],
+      errors: [
+        {
+          title: 'Deviations from the schedule',
+          text: 'Our system detects any deviations in lighting operation from the set schedule and immediately notifies you. This allows operators to take timely action to restore the schedule and avoid inconsistencies',
+        },
+        {
+          title: 'Malfunctions in lighting groups',
+          text: 'Our system detects any malfunctions in the operation of individual lighting groups, such as lamp failures, power grid issues, etc. and reports them immediately. This allows us to respond quickly and fix problems to ensure uninterrupted lighting operation.'
+        },
+        {
+          title: 'Energy consumption detection',
+          text: 'Our system analyses the energy consumption of each lighting group and identifies possible excessive costs. This allows you to identify potential sources of energy waste and take action to reduce them, which helps you save energy.'
+        },
+        {
+          title: 'Low light warning',
+          text: 'Our system automatically detects low light levels in the premises and alerts operators. This allows for a quick response and ensures proper comfort and safety for the users of the premises.'
+        }
+      ]
+    },
+    //9 NEW TAB Система технічного енергообліку
+    {
+      tab_title: 'Technical energy accounting system',
+      tab_head: 'Dispatching of the technical energy accounting system',
+      functions: [
+        {
+          title: 'Operational collection of meter readings at the facility',
+          text: 'We provide prompt collection of meter readings of electricity, water, gas and other resources at the facility to monitor their consumption',
+        },
+        {
+          title: 'Generating a report on the resources used for the selected period',
+          text: 'We automatically generate reports that contain information about the resources used (electricity, water, gas, etc.) for the selected period, which allows you to analyse and plan consumption',
+        },
+        {
+          title: 'Keeping a history log',
+          text: 'We keep a history log of the technical energy metering system, recording all events and changes in the use of resources for further analysis and control',
+        },
+        {
+          title: 'Simplifying life and optimising costs',
+          text: 'Providing information about resources and their use in the form of clear reports helps to manage costs and optimise their use. This allows you to allocate resources more efficiently, reduce costs and increase the level of comfort for users.'
+        }
+      ],
+      errors: [
+        {
+          title: 'Meter readings missing',
+          text: 'We detect missing meter readings and automatically report them so that we can take steps to restore them and ensure reliable data collection',
+        },
+        {
+          title: 'Meter fault',
+          text: 'We detect meter malfunctions and automatically initiate meter maintenance or replacement to avoid inaccurate measurements and ensure accurate resource accounting',
+        }
+      ]
+    },
+    //10 NEW TAB Екскалатори та ліфти
+    {
+      tab_title: 'Escalators and lifts',
+      tab_head: 'Dispatching of escalators and elevators',
+      functions: [
+        {
+          title: 'Monitoring and control of escalators and lifts',
+          text: 'Ensuring constant monitoring of escalators and elevators to identify any deviations in operation and respond promptly to them',
+        },
+        {
+          title: 'Maintenance planning',
+          text: 'Analysis of data on the condition of escalators and elevators allows you to plan maintenance and preventive measures to ensure their reliable and uninterrupted operation',
+        },
+        {
+          title: 'Automatic fault detection',
+          text: 'The system automatically detects possible malfunctions in the operation of escalators and elevators, such as stops, delays or deviations from the normal operating mode',
+        },
+        {
+          title: 'Saving operation data',
+          text: 'Keeping a log of escalator and lift operation history, recording all events and maintenance, helps to analyse and plan maintenance and modernisation work',
+        }
+      ],
+      errors: [
+        {
+          title: 'Escalator and lift malfunction detection',
+          text: 'The system detects malfunctions such as stops, delays, or inoperability during operation and reports them to operators for further intervention',
+        },
+        {
+          title: 'Equipment condition monitoring',
+          text: 'Monitoring of escalators and elevators` performance parameters allows for early detection of signs of wear and tear, deficiencies or potential problems and prevention of accidents',
+        },
+        {
+          title: 'Prompt response to emergencies',
+          text: 'The system provides immediate notification of any emergency conditions or malfunctions in the operation of escalators and elevators, allowing operators to respond quickly and fix problems',
+        },
+        {
+          title: 'Preventing malfunctions and accidents',
+          text: 'Through ongoing monitoring and maintenance planning, we prevent potential malfunctions and accidents, allowing us to keep escalators and lifts running smoothly',
+        }
+      ]
+    },
+    //11 NEW TAB Системи «загальних замірів» 
+    {
+      tab_title: 'General metering systems',
+      tab_head: 'Dispatching of the “general metering” system',
+      functions: [
+        {
+          title: 'Visual display of the technological process',
+          text: 'We provide a visual display of the overall measurement system, allowing operators to see the status of the system and its components in real time',
+        },
+        {
+          title: 'Remote monitoring and control of systems',
+          text: 'We remotely monitor system parameters such as temperature, humidity, and the status of water leakage sensors to detect any anomalies in time',
+        },
+        {
+          title: 'Prompt notification of emergency conditions',
+          text: 'We automatically send operators a quick notification whenever an alarm condition is detected or parameters are outside the operating parameters',
+        },
+        {
+          title: 'Keeping a log of operation history',
+          text: 'We keep a log of the system`s operation history with event recording, which allows us to analyse efficiency and identify potential problems in time',
+        }
+      ],
+      errors: [
+        {
+          title: 'Flood detector triggering',
+          text: 'We detect water leakage detectors and report them immediately to prevent possible flooding and property damage',
+        },
+        {
+          title: 'Temperature rise in a priority room',
+          text: 'We detect rising temperatures in priority rooms, such as the server room or control room, and automatically take action to lower the temperature and prevent possible overheating of the equipment',
+        }
+      ]
+    },
+    //12 NEW TAB Системи електропостачання
+    {
+      tab_title: 'Power supply systems',
+      tab_head: 'Dispatching of the power supply system',
+      functions: [
+        {
+          title: 'Visual display of the power supply scheme',
+          text: 'We provide a visual display of the power supply scheme, which allows operators to quickly assess the state of the system and identify possible problems',
+        },
+        {
+          title: 'Remote monitoring of system operation',
+          text: 'Our system provides the ability to remotely monitor the power supply system, allowing operators to monitor its condition in real time and respond effectively to changes',
+        },
+        {
+          title: 'Prompt notification of emergency conditions',
+          text: 'We provide prompt notification of any emergency conditions in the power supply system, allowing operators to respond and fix problems immediately',
+        },
+        {
+          title: 'Keeping a log of the operation history with event recording',
+          text: 'Our system automatically maintains an event-driven operation history log, which allows you to store detailed information about all changes and events that occur in the system',
+        }
+      ],
+      errors: [
+        {
+          title: 'Power supply system overload failure',
+          text: 'Our system detects emergency conditions related to power system overload and provides notifications to operators to take measures to avoid overload and maintain normal operation.'
+        },
+        {
+          title: 'Input feeder failure',
+          text: 'We automatically detect emergency conditions related to the tripping of the input feeders of the power supply system and provide operators with notifications to take quick action to restore them.'
+        },
+        {
+          title: 'Fixing voltage surges in the power supply system',
+          text: 'Our system detects voltage surges in the power supply system and provides operators with relevant notifications to avoid possible damage to equipment and ensure stable operation of the system',
+        },
+      ]
+    }
+  ]
+
+section(data-block="services").services 
+    h2   Our time-tested building automation solutions
+    .services__tabs.container
+      .tab.tab-mobile.flex.ai-center
+        .hamburger.service-hamburger
+          span
+          span
+          span
+        p.tab-mobile__title Supply and exhaust ventilation
+      ul.services__tab-list 
+        for tabs in services 
+          li.tab.flex.ai-center.md-jc-center-down(class=tabs.tab_class)= tabs.tab_title
+    .services__items.container
+      for service in services
+        .service(class=service.tab_class)
+          h3.service__title= service.tab_head
+          .service__items
+            .items
+              .functions
+                h4  the functions we perform:
+                .item.container.md-flex-down.wrap
+                  for func in service.functions
+                    .function
+                      h5.function__title.flex.ai-center.jc-center= func.title
+                      .function__text
+                        p= func.text
+              .errors 
+                h4 Errors we detect and failures we prevent
+                .item.container.md-flex-down.wrap
+                  for errors in service.errors 
+                    .error
+                      h5.error__title.flex.ai-center.jc-center= errors.title
+                      .error__text
+                        p= errors.text

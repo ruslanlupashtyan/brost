@@ -1,2 +1,50 @@
 .footer {
+  padding: 80px 15px 40px;
+  .form {
+    margin-right: 20px;
+    @include max-width(b-md) {
+      margin-right: unset;
+    }
+  }
+  .contacts {
+    padding-top: 28px;
+    &__btn {
+      margin-bottom: 30px;
+      @include font(24, 30, 400);
+      position: relative;
+      &::before {
+        content: url(../../../images/phone-m.svg);
+        display: block;
+        position: absolute;
+        left: 70px;
+        top: 15px;
+        @include max-width(b-md) {
+          left: 30px;
+          top: 10px;
+        }
+      }
+      &:last-child {
+        &::before {
+          content: url(../../../images/mail-m.svg);
+        }
+      }
+      @include max-width(b-md) {
+        margin-bottom: 8px;
+        @include font(16, 20, 400);
+      }
+    }
+  }
+  h2 {
+    margin-bottom: 8px;
+  }
+  h4 {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  p {
+    @include font(24, 24, 400);
+    @include max-width(b-md) {
+      @include font(12, 14, 400);
+    }
+  }
 }

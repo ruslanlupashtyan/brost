@@ -11,13 +11,26 @@
     background-size: 140%;
   }
   @include max-width(b-sm) {
-    background-size: 165%;
+    background-size: 185%;
+    border-radius: 0 0 8px 8px;
+  }
+  @media (max-width: 500px) {
+    background-size: 190%;
+  }
+  @media (max-width: 440px) {
+    background-size: 220%;
   }
   @include max-width(b-xs) {
     background-size: 235%;
   }
+  @media (max-width: 350px) {
+    background-size: 275%;
+  }
   h2 {
     margin-bottom: 50px;
+    @include max-width(b-md) {
+      margin-bottom: 32px;
+    }
   }
   h3 {
     line-height: 40px;
@@ -37,7 +50,7 @@
   &__descr {
     max-width: 950px;
     margin: 0 auto;
-    padding: 15px;
+    // padding: 15px;
     padding-bottom: 30px;
     @include max-width(b-xl) {
       max-width: 850px;
@@ -52,6 +65,7 @@
   .count {
     margin-right: 16px;
     @include font(96, 96, 400);
+    font-family: "kharkiv";
     color: $blue-color;
     @include max-width(b-lg) {
       @include font(46, 46, 400);
