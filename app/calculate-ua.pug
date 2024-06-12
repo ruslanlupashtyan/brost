@@ -1,19 +1,19 @@
 
 doctype html    
-html(lang="en")
+html(lang="ua")
     include pug/sections/global/head.pug
     body
       header.calculate-header.flex.ai-center.jc-around
-        a(href="/en.html") Return to main 
+        a(href="/ua.html") Повернутись на головну 
         include images/logo-blue.svg
         .calculate-header__lang.togle-lang.lang.desktop-visible.flex.ai-center
-            a(href="/calculate.html").link.lang__ua.active
+            .lang__ua
                 p UA
             .lang__divider 
                 p /
-            .lang__eng
+            a(href="/calculate.html").lang__eng.active
                 p ENG
-      include pug/sections/form-en.pug
+      include pug/sections/form.pug
     script(src="js/axios.js" async)
     script(src="js/intlTelInput.js" async)
     script(src="js/main.js" defer)

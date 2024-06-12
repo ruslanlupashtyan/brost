@@ -35,13 +35,13 @@ header.header
                 for link in nav 
                     li
                         a(data-animate= link.scroll href= link.link)= link.title
-        a(href="/calculate.html").header__btn.btn.btn--white Розрахунок вартості
+        a(href="/calculate-ua.html").header__btn.btn.btn--white Розрахунок вартості
         .header__lang.togle-lang.lang.desktop-visible.flex.ai-center
             .lang__ua
                 p UA
             .lang__divider 
                 p /
-            a(href="/en.html").lang__eng.active
+            a(href="/").lang__eng.active
                 p ENG
         .header__mobile-btn.mobile-btn.mobile-visible
             a.hamburger.mobile-hamburger
@@ -51,13 +51,19 @@ header.header
 
 
 .header__menu-mobile.header-mob
-    ul.header-mob__list.list
-        for link in nav 
-            li.list__item.item
-                a.item__link(class='header__menu--link' data-animate=link.scroll)= link.title
+    .flex
+        ul.header-mob__list.list
+            for link in nav 
+                li.list__item.item
+                    a.item__link(class='header__menu--link' data-animate=link.scroll)= link.title
+        .header-mob__lang.lang
+            p Мова
+            a(href="/")
+                include ../../../images/gb.svg 
+            a 
+                include ../../../images/ua.svg 
     a(href="/calculate.html").header-mob__btn.btn.btn--blue Розрахунок вартості
     .header-mob__contacts.container.flex.lg-flex-column-up
         a(href="tel:+447488818545").contact__item +44 74 888 18 545
         a(href="tel:+380688818245").contact__item +380 68 881 82 45
         a(href="mailto:brostltd@gmail.com").contact__item brostltd@gmail.com
-    a(href="/en.html").header-mob__lang change to english

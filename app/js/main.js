@@ -310,11 +310,45 @@ if (window.innerWidth < 768 && window.innerWidth >= 536) {
     scrollHorisontal(scrollSection, 360, 220, 2.1, -275);
     console.log(768);
   });
-} else if (window.innerWidth < 536 && window.innerWidth >= 426) {
+} else if (window.innerWidth < 536 && window.innerWidth >= 525) {
   document.addEventListener("scroll", function () {
-    scrollHorisontal(scrollSection, 360, 210, 2.1, -290);
+    scrollHorisontal(scrollSection, 360, 250, 2.1, -290);
     console.log(536);
   });
+} else if (window.innerWidth < 525 && window.innerWidth >= 515) {
+  document.addEventListener("scroll", function () {
+    scrollHorisontal(scrollSection, 360, 250, 2.9, -290);
+    console.log(525);
+  });
+} else if (window.innerWidth < 515 && window.innerWidth >= 500) {
+  document.addEventListener("scroll", function () {
+    scrollHorisontal(scrollSection, 360, 245, 2.9, -310);
+    console.log(515);
+  });
+
+  // !!!!!!!!!!
+} else if (window.innerWidth < 500 && window.innerWidth >= 480) {
+  document.addEventListener("scroll", function () {
+    scrollHorisontal(scrollSection, 360, 245, 2.9, -320);
+    console.log(500);
+  });
+} else if (window.innerWidth < 480 && window.innerWidth >= 470) {
+  document.addEventListener("scroll", function () {
+    scrollHorisontal(scrollSection, 360, 175, 1.9, -330);
+    console.log(480);
+  });
+} else if (window.innerWidth < 470 && window.innerWidth >= 430) {
+  document.addEventListener("scroll", function () {
+    scrollHorisontal(scrollSection, 360, 150, 1.9, -380);
+    console.log(470);
+  });
+  // } else if (window.innerWidth < 525 && window.innerWidth >= 426) {
+  //   document.addEventListener("scroll", function () {
+  //     scrollHorisontal(scrollSection, 360, 210, 2.1, -290);
+  //     console.log(525);
+  //   });
+
+  // !!!!!!!!!!!!!!!!!!!!!!!!!!!
 } else if (window.innerWidth < 426 && window.innerWidth >= 406) {
   document.addEventListener("scroll", function () {
     scrollHorisontal(scrollSection, 360, 180, 2.1, -395);
@@ -340,7 +374,7 @@ if (window.innerWidth < 768 && window.innerWidth >= 536) {
 function scrollHorisontal(e, maxY, minY, koef, endVal) {
   let rect = e.getBoundingClientRect();
   let y = rect.y;
-  // console.log(`BEFORE: ${y}`);
+  console.log(`BEFORE: ${y}`);
   if (y < maxY && y > minY) {
     y = (y - 350) * koef;
     e.style.transform = `translateX(${y}px)`;

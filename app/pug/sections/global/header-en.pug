@@ -35,9 +35,9 @@ header.header
                 for link in nav 
                     li
                         a(data-animate= link.scroll href= link.link)= link.title
-        a(href="/calculate-en.html").header__btn.btn.btn--white Cost calculation
+        a(href="/calculate.html").header__btn.btn.btn--white Cost calculation
         .header__lang.togle-lang.lang.desktop-visible.flex.ai-center
-            a(href="/index.html").lang__ua.active
+            a(href="/ua.html").lang__ua.active
                 p UA
             .lang__divider 
                 p /
@@ -51,13 +51,19 @@ header.header
 
 
 .header__menu-mobile.header-mob
-    ul.header-mob__list.list
-        for link in nav 
-            li.list__item.item
-                a.item__link(class='header__menu--link' data-animate=link.scroll)= link.title
+    .flex
+        ul.header-mob__list.list
+            for link in nav 
+                li.list__item.item
+                    a.item__link(class='header__menu--link' data-animate=link.scroll)= link.title
+        .header-mob__lang.lang
+            p Language
+            a
+                include ../../../images/gb.svg 
+            a(href="ua.html") 
+                include ../../../images/ua.svg 
     a(href="/calculate-en.html").header-mob__btn.btn.btn--blue Cost calculation
     .header-mob__contacts.container.flex.lg-flex-column-up
         a(href="tel:+447488818545").contact__item +44 74 888 18 545
         a(href="tel:+380688818245").contact__item +380 68 881 82 45
         a(href="mailto:brostltd@gmail.com").contact__item brostltd@gmail.com
-    a(href="/index.html").header-mob__lang change to ukrainian
